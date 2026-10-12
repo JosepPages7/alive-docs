@@ -56,7 +56,6 @@ For the full list of what's available, go to [Script language reference](languag
 - **Fewer data types.** Types that aren't in the [reference](language-reference.md), for example JSON, HTTP, XML and stream types, are reported as `UnknownType` when you compile.
 - **Codeunit variables only for a fixed set.** You can declare variables for a [list of standard codeunits](standard-codeunits.md) and for `ExcelWorkbook`. Codeunit variables can't be assigned, cleared, passed as parameters or returned from procedures.
 - **Output.** Use `console.log` to write to the **OUTPUT** pane. `Message` shows a dialog.
-- **Zero-based text methods.** The text methods `IndexOf`, `LastIndexOf`, `Substring`, `Insert` and `Remove` use zero-based positions, and `IndexOf` returns -1 when the text isn't found. The classic functions such as `StrPos` and `CopyStr` are one-based.
 - **Protected tables.** Writing to ledger entries, posted documents and other protected tables requires a Permissions section in the program. To learn more, go to [Write to protected tables](protected-tables.md).
 - **Not supported.** Record `Rename` isn't supported.
 - **SetCurrentKey** never fails. If no key matches the fields, the records are still sorted by them.
