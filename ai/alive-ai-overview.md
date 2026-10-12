@@ -7,6 +7,8 @@ description: What ALive AI is, what it does for workspace administrators, what i
 
 ALive AI is an add-on for ALive Analysis in Business Central that helps workspace administrators design ALive Workspaces with an AI model, without sending any business data to the model.
 
+ALive AI is a separate extension: you can use it only when it's installed in your environment, together with ALive Analysis. Without ALive AI, ALive Analysis works as usual, without the assistant. To learn more, see [Three separate extensions](../index.md#three-separate-extensions).
+
 ## What ALive AI does
 
 ALive AI adds an assistant to the ALive Workspace Studio. You describe what you need in your own words, and an AI model proposes the design. The model is told how your tables are defined (names, fields, relations, FlowField formulas), never what they contain. It can't read, count or sample a record, and it can't run a query, a report or a script.
