@@ -15,7 +15,7 @@ ALive Analysis adds interactive workspaces, spreadsheet-style sheets and a visua
 | ALive Sheets | Spreadsheet workbooks inside Business Central, filled by queries and by a script that the sheet administrator writes. See [ALive Sheets overview](sheet-overview.md). |
 | Query Designer | A visual designer for the queries that feed workspaces and sheets. See [Query Designer](query-designer.md). |
 
-ALive Analysis works on its own: it doesn't need any other ALive app. The separate ALive AI app adds an assistant to the Workspace Studio.
+ALive Analysis is a separate extension: you can use it only when it's installed in your environment. It works on its own and doesn't need ALive Code. ALive AI, another separate extension, adds an assistant to the Workspace Studio when it's installed too. To learn more, see [Three separate extensions](../index.md#three-separate-extensions).
 
 ## Where to start
 

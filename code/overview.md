@@ -7,6 +7,8 @@ description: Explains what ALive Code is, what you can do with it, and who shoul
 
 ALive Code lets administrators write and run AL code directly in the Business Central web client, without Visual Studio Code and without publishing an extension.
 
+ALive Code is a separate extension: you can use it only when it's installed in your environment. It doesn't need ALive Analysis or ALive AI, and they don't need it. To learn more, see [Three separate extensions](../index.md#three-separate-extensions).
+
 ## What you can do with ALive Code
 
 - Write a script on the **ALive Code** page and run it with F5. The result appears in the **OUTPUT** pane next to the code.
