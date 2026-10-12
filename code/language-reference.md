@@ -63,7 +63,7 @@ System fields such as `SystemId`, `SystemCreatedAt` and `SystemModifiedBy` can b
 
 Contains, StartsWith, EndsWith, IndexOf, LastIndexOf, Substring, Insert, Remove, Replace, Split, ToUpper, ToLower, Trim, TrimStart, TrimEnd, PadLeft, PadRight.
 
-Positions are zero-based. `IndexOf` and `LastIndexOf` return -1 when the text isn't found. `Split` returns a `List of [Text]` and can only be used in an assignment to a list or in a `foreach`.
+Positions start at 1, as in AL. `IndexOf` and `LastIndexOf` return 0 when the text isn't found. `Split` returns a `List of [Text]` and can only be used in an assignment to a list or in a `foreach`.
 
 ## List and Dictionary methods
 
