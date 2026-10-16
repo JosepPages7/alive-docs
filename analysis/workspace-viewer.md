@@ -17,7 +17,7 @@ The viewer opens when you open a workspace from the **ALive Analysis** page, fro
 | Side panel (right edge) | Three panels: **View** (the mode and its fields), **Filters** and **Calculated**. Choose a button to open its panel and again to close it. Drag the panel's edge to resize it. |
 | Buttons at the bottom of the right edge | The **Views** menu, **Refresh** (F5) and **Full screen**. |
 | Page tabs (bottom) | Shown when the workspace has two or more pages. |
-| Filter bar (top) | Shown when page filters exist. See [Filter views and pages](workspace-filters.md). |
+| Filter bar (top) | Shown when page filters exist. See [Filter views and pages](workspace-filters.md). It also shows **Data as of \<date and time\>** when the workspace opened with your scheduled result; **Refresh** runs it with the current data. See [Schedule a workspace to run in the background](workspace-schedule.md). |
 | Details pane | Shows the source rows behind a cell. See [Drill down to source rows and Business Central pages](workspace-drilldown.md). |
 
 A pane shows **Not run yet**, **Running…** or the dataset's error while it has no rows.

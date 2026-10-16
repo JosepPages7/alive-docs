@@ -21,6 +21,9 @@ A workspace opens in the workspace viewer and runs at once. If its datasets ask 
 | --- | --- |
 | **Name** | The name of the workspace or sheet. For a workspace, this is its title in your language when the designer translated it. |
 | **Description** | What the workspace or sheet shows. |
+| **Schedule** | Your schedule of the workspace in this company, such as **Mon-Fri 06:00**, followed by the job's status when it isn't waiting for its next run. Shown only to users who can schedule. |
+
+To run a workspace in the background on a schedule, select it and choose **Schedule...**. See [Schedule a workspace to run in the background](workspace-schedule.md).
 
 The list contains:
 

@@ -45,6 +45,7 @@ Open the workspace menu (**…**) and choose **Settings…**. Choosing **OK** sa
 | **Default period at run** | The **Period** the run dialog starts with, such as **This fiscal year**. When set, the dialog opens even when only one dataset asks for dates. Each user's last choice wins. See [Ask for filters at run](workspace-run-options.md). |
 | **Show the status bar (rows, time, statistics)** | Shows a status bar in the viewer with the row counts, the run time and other statistics. Off by default. |
 | **Open from (card and list)** | One check box per kind of record, such as Customer or Item. When checked, the **ALive Analysis** action on that card and list opens this workspace filtered to the record. See [Open a workspace from a card or list](workspace-open-in-context.md). |
+| **Snapshot size limit (MB)** | Under **Scheduled runs**: the most one user's scheduled result of this workspace may take, compressed. A larger one fails and the previous one stays. Blank means 50 MB. See [Schedule a workspace to run in the background](workspace-schedule.md). |
 
 ## Unsaved changes
 

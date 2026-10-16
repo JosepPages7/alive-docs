@@ -36,6 +36,7 @@ Users can also open workspaces from customer, vendor, item and other cards and l
 | --- | --- |
 | ALive Workspaces Admin | People who design workspaces and decide who can run them. They can run every workspace. |
 | ALive Workspaces User | People who run workspaces. They also need access to each workspace they run. |
+| ALive Workspaces Scheduler | Workspace users who may schedule workspaces to run in the background, in addition to ALive Workspaces User. See [Schedule a workspace to run in the background](workspace-schedule.md). |
 | ALive Sheets Admin | People who create and design sheets. |
 | ALive Sheets User | People who use sheets that an administrator shares with them. |
 

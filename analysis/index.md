@@ -24,6 +24,7 @@ ALive Analysis adds workspaces, spreadsheet-style sheets and a visual query desi
 - [Drill down to source rows and Business Central pages](workspace-drilldown.md)
 - [Ask for filters at run](workspace-run-options.md)
 - [Open a workspace from a card or list](workspace-open-in-context.md)
+- [Schedule a workspace to run in the background](workspace-schedule.md)
 
 ## Design a workspace
 
