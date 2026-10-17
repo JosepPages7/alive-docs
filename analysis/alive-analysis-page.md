@@ -34,7 +34,7 @@ The list contains:
 
 A kind is left out when you have no permission set for it. For example, if you only have **ALive Workspaces User**, you see no sheets.
 
-On a phone, the list shows only the names. Tap one to open it.
+On a phone, the list shows only the names.
 
 ## Opened from a card or list
 
