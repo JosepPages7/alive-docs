@@ -1,6 +1,6 @@
 ---
 title: Add and manage datasets
-description: The four kinds of workspace datasets, how to add, rename, reorder and delete them, and what the Dataset settings do.
+description: The kinds of workspace datasets, how to add, rename, reorder and delete them, and what the Dataset settings do.
 ---
 
 # Add and manage datasets
@@ -17,12 +17,13 @@ In the **ALive Workspace Studio**, choose **Add** in the **Datasets** panel and 
 | **Code dataset** | **Write a script…** | A script that reads data and adds rows. See [Code datasets (scripts)](workspace-script-dataset.md). |
 | **Report dataset** | **Use a report…** | The data of a Business Central report. See [Report datasets](workspace-report-dataset.md). |
 | **Financial report dataset** | **Use a financial report…** | A financial report statement calculated by Business Central. See [Financial report datasets](workspace-financial-report-dataset.md). |
+| **Combined dataset** | **Append datasets…** | The rows of two or more other datasets of the workspace, one after the other. See [Append datasets](workspace-append-dataset.md). |
 
 The kind of a dataset can't be changed after you add it. To use another source, add a new dataset.
 
 ## Edit a dataset's source
 
-Choose the pencil on the dataset, or double-click it. Depending on the kind, the pencil is **Edit the query…**, **Edit the code…**, **Report options…** or **Financial report options…**.
+Choose the pencil on the dataset, or double-click it. Depending on the kind, the pencil is **Edit the query…**, **Edit the code…**, **Report options…**, **Financial report options…** or **Pick the datasets…**.
 
 When a source change brings new fields, the Studio offers to add them to the layout: choose **Add columns** or **Not now**. Columns you removed earlier aren't offered again.
 
@@ -36,7 +37,7 @@ Open the dataset's **⋯** menu (Dataset actions), or right-click the dataset:
 | **Rename…** | Renames the dataset. Dataset names must be unique in the workspace. |
 | **Settings…** | Opens the dataset settings described below. |
 | **Move up** / **Move down** | Changes the order of the datasets. |
-| **Delete** | Deletes the dataset and the default views that show it. Deleting a script's dataset also deletes the datasets that take its outputs. |
+| **Delete** | Deletes the dataset and the default views that show it. Deleting a script's dataset also deletes the datasets that take its outputs. An append dataset stops appending a deleted dataset. |
 
 ## Dataset settings
 

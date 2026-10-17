@@ -36,6 +36,8 @@ What a cell opens depends on its column:
 
 FlowFields, totals, generated date columns, scripts and reports have no automatic drilldown. A multi-company query or financial report has no drilldown, because the rows span companies.
 
+To open another page of the workspace filtered to a cell instead, use **Drill through**. See [Drill through to another page](workspace-views-and-pages.md#drill-through-to-another-page).
+
 ## Set what a column opens (designers)
 
 1. In the **ALive Workspace Studio**, select the layout column.

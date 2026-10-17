@@ -1,6 +1,6 @@
 ---
 title: List and pivot views
-description: How to group, sort, total and format a list view, and how to build a pivot with rows, columns, values, calculations and Top N in the workspace viewer.
+description: How to group, sort, total and format a list view (data bars, color scales, icons by rule), and how to build a pivot with rows, columns, values, calculations and Top N in the workspace viewer.
 ---
 
 # List and pivot views
@@ -25,7 +25,7 @@ Point at a column header and choose its arrow, or right-click the header, for th
 | **Filter the page by** *column*… | Adds a page filter on the column. |
 | **Pin Column** | Keeps the column at the left or right edge while you scroll. |
 | **Value Aggregation** | Number columns: **Sum**, **Average**, **Min**, **Max**, **Count** or **None** for the totals. |
-| **Show As** | Number columns: draws the cells as a **Data Bar** or a **Color Scale**. |
+| **Show As** | Number columns: draws the cells as a **Data Bar**, a **Color Scale** or **Icons by rule**. See [Icons by rule](#icons-by-rule). |
 | **Autosize This Column** / **Autosize All Columns** | Fits the column widths to their content. |
 | **Group by** / **Ungroup by** *column* | Groups or ungroups by the column. |
 | **Choose Columns** | Opens the **Columns** list of the **View** panel. |
@@ -49,6 +49,16 @@ Under each value, **Show value as** turns it into a share or a change: **% of gr
 The limit button on a Rows or Columns field keeps only the **Top** or **Bottom** members, ranked by a value. **Group the rest as Others** keeps the remaining rows in an **Others** member, so the totals stay complete.
 
 Click a header's sort icon to sort by it, and drag headers to reorder members or values.
+
+The chart button next to a value sets how its cells are drawn, as in a list: **Data Bar**, **Color Scale** or **Icons by rule**. In a pivot, totals stay plain unless **Color the totals** is on.
+
+## Icons by rule
+
+**Icons by rule** marks each number with an arrow and a color: an up arrow in green from the **High from** value, a down arrow in red below the **Low below** value, and an orange dot between them. Without values, the sign decides: positive values go up, negative values go down, and zero is the dot. **Lower is better (high reads red)** swaps the colors for costs or overdue days; the arrows keep pointing the same way.
+
+To set the values, choose **Show As** > **Rule…** after you choose **Icons by rule**. For a percentage, such as **% of grand total**, type the values in percent: 10 means 10 %.
+
+Export gives the numbers to Excel, not the icons.
 
 ## Table options
 

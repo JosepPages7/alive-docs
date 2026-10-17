@@ -1,6 +1,6 @@
 ---
 title: Chart, KPI and slicer views
-description: How to build charts (Graphics mode), KPI tiles and slicers in the workspace viewer, and how clicking them filters the other views.
+description: How to build charts (Graphics mode), drill down a chart level by level, KPI tiles and slicers in the workspace viewer, and how clicking them filters the other views.
 ---
 
 # Chart, KPI and slicer views
@@ -31,7 +31,11 @@ Pick a chart type, then add fields to the wells:
 | **Treemap** | One nesting level per **Category** field, sized by the first value; positive values only. |
 | **Funnel** | The stages of the first **Category** field; positive values only. |
 
-**Chart options** depend on the type and include **Legend**, **Value labels**, **Sort**, **Colors**, **Average line**, **Target**, **Max / min**, **Trend line**, **Zoom slider**, **Independent scales** and **Big numbers**. **Show value as** and the Top / Bottom limit work as in a pivot. See [List and pivot views](workspace-list-and-pivot.md).
+**Chart options** depend on the type and include **Drill down level by level**, **Legend**, **Value labels**, **Sort**, **Colors**, **Average line**, **Target**, **Max / min**, **Trend line**, **Zoom slider**, **Independent scales** and **Big numbers**. **Show value as** and the Top / Bottom limit work as in a pivot. See [List and pivot views](workspace-list-and-pivot.md).
+
+### Drill down level by level
+
+With two or more **Category** fields, a bar, line, area, pie, funnel or Bar + line chart can show one field at a time: turn on **Drill down level by level** in **Chart options**. The chart starts with the first field, for example the years. Click a bar to drill into it and see the next field for that member only, for example the months of that year. The trail above the chart, such as **All › 2025**, goes back up. At the last field, a click filters the page as usual.
 
 ## KPI tiles
 
@@ -55,6 +59,8 @@ Add one field to the slicer's **Field** well. The slicer lists the field's value
 Clicking a chart mark, a pivot cell or a KPI tile (with a **Tiles by** field) filters the other views of the page to that member, across datasets that share the field. Click the same mark again, or an empty area, to clear it. The filtered views show a chip in their pane header; choose its **✕** to remove the filter. These click filters are temporary and aren't saved. See [Filter views and pages](workspace-filters.md).
 
 To see the rows behind a chart mark or tile, double-click it. See [Drill down to source rows and Business Central pages](workspace-drilldown.md).
+
+When the workspace has another page, right-clicking a chart mark, a pivot cell or a KPI tile also offers **Drill through**. See [Drill through to another page](workspace-views-and-pages.md#drill-through-to-another-page).
 
 ## Related information
 

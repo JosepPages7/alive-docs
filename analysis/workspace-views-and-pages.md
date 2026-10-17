@@ -1,6 +1,6 @@
 ---
 title: Arrange views in panes and pages
-description: How to place workspace views side by side in panes, spread them over pages, and save the arrangement as the default views for all users.
+description: How to place workspace views side by side in panes, spread them over pages, drill through from a cell to another page, add text views, and save the arrangement as the default views for all users.
 ---
 
 # Arrange views in panes and pages
@@ -29,6 +29,26 @@ Pages split a workspace into separate screens, each with its own panes. Page tab
 | Rename, reorder or delete a page | Choose the active page tab, or right-click any page tab, and choose **Rename**, **Move left**, **Move right** or **Delete page**. Double-click a page tab to rename it. Drag page tabs to reorder them. |
 
 Deleting a page deletes its views. A page whose last view is moved away or deleted disappears.
+
+## Drill through to another page
+
+Right-click a pivot value, a group row of a list, a KPI tile or a chart mark, choose **Drill through**, and then choose a page. That page opens filtered to what you clicked, for example one customer or one month, across its datasets that share the field. The filter bar shows **Back to** *page*: choose it to return, and the drill-through filter goes away.
+
+A drill-through filter is never saved; the next drill-through to the same page replaces it. Your own page filters stay. **Drill through** shows only when the workspace has another page.
+
+## Text views
+
+A **Text** view shows headings, notes and live numbers next to the other views, for example a title for a page. Choose **Text** at the top of the **View** panel and write in the **Text** box:
+
+| Write | To get |
+| --- | --- |
+| `# Sales` | A heading |
+| `## By country` | A smaller heading |
+| `- A point` | A list item |
+| `**important**` | Bold text |
+| `{Amount}` | A column's value for the view's rows: a number's total, or a text column's value when the rows have one to three values |
+
+**Insert a column…** puts a column at the cursor. The numbers follow the view's filters and the page's, so a slicer changes them. The text is applied when you leave the box. A default view's text can be translated in the workspace's translations.
 
 ## Your views and the default views
 

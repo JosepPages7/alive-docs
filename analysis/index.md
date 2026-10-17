@@ -35,6 +35,7 @@ ALive Analysis adds workspaces, spreadsheet-style sheets and a visual query desi
 - [Code datasets (scripts)](workspace-script-dataset.md)
 - [Report datasets](workspace-report-dataset.md)
 - [Financial report datasets](workspace-financial-report-dataset.md)
+- [Append datasets](workspace-append-dataset.md)
 - [Design the layout columns of a dataset](workspace-layout-columns.md)
 - [Add calculated columns](workspace-calculated-columns.md)
 - [Manage workspaces](workspace-manage.md): rename, copy, delete, export, import and translate.
