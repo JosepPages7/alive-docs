@@ -10,7 +10,7 @@ The **ALive Analysis** page lists every workspace and sheet you're allowed to ru
 ## Open a workspace or a sheet
 
 1. Choose the search icon, enter **ALive Analysis**, and then choose the related link.
-2. Find the workspace or sheet in the list. Workspaces are listed under **Workspaces** and sheets under **Sheets**.
+2. Find the workspace or sheet in the list. Workspaces come first, then sheets, each by name.
 3. Choose the name, or select the line and choose **Open**.
 
 A workspace opens in the workspace viewer and runs at once. If its datasets ask for filters or options, you're asked for them first. A sheet opens on its sheet page.
@@ -20,6 +20,7 @@ A workspace opens in the workspace viewer and runs at once. If its datasets ask 
 | Field | What it shows |
 | --- | --- |
 | **Name** | The name of the workspace or sheet. For a workspace, this is its title in your language when the designer translated it. |
+| **Type** | **Workspace** or **Sheet**. Shown only when the list has both. |
 | **Description** | What the workspace or sheet shows. |
 | **Schedule** | Your schedule of the workspace in this company, such as **Mon-Fri 06:00**, followed by the job's status when it isn't waiting for its next run. Shown only to users who can schedule. |
 
@@ -31,7 +32,9 @@ The list contains:
 - Every sheet, if you have the **ALive Sheets Admin** permission set.
 - Otherwise, only the workspaces and sheets an administrator shared with one of your permission sets.
 
-A group is left out when you have no permission set for it. For example, if you only have **ALive Workspaces User**, you don't see a **Sheets** group.
+A kind is left out when you have no permission set for it. For example, if you only have **ALive Workspaces User**, you see no sheets.
+
+On a phone, each workspace or sheet is a tile with its name, type, description and schedule.
 
 ## Opened from a card or list
 
