@@ -33,6 +33,14 @@ The source no longer has a column the layout uses. In the Studio, delete the lay
 
 The code dataset whose script fed this dataset was deleted. Delete this dataset, or add it again from another code dataset's **⋯** menu with **Add a dataset from an output…**.
 
+### Its datasets have not run.
+
+An append dataset shows this when none of the datasets it appends has rows: they failed or the run was cancelled. Fix the error of those datasets, and then choose **Refresh**. See [Append datasets](workspace-append-dataset.md).
+
+### The dataset "\<name\>" appends other datasets: it has no run of its own (the viewer builds it from their rows).
+
+An append dataset can't run by itself; the workspace runs the datasets it appends. Open the workspace in the viewer to see it.
+
 ## Permissions and scripts
 
 ### You do not have permission to read table \<table\>.

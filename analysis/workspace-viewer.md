@@ -28,6 +28,7 @@ Choose the mode at the top of the **View** panel:
 
 - **List** and **Pivot**: see [List and pivot views](workspace-list-and-pivot.md).
 - **Graphics**, **KPI** and **Slicer**: see [Chart, KPI and slicer views](workspace-charts-kpis-slicers.md).
+- **Text**: headings, notes and live numbers. See [Text views](workspace-views-and-pages.md#text-views).
 
 ## The view tab menu
 
@@ -40,7 +41,7 @@ Choose the active tab, or right-click any tab:
 | **Panes** / **Pages** | Moves the view to another pane or page. See [Arrange views in panes and pages](workspace-views-and-pages.md). |
 | **Expand all groups** / **Collapse all groups** | For a grouped list. |
 | **Reset this view** | Clears the view's settings: it becomes a plain list of the dataset's layout columns, as designed. |
-| **Export** | **To Excel** or **To CSV**. |
+| **Export** | **To Excel** or **To CSV**; a chart also **As an image (PNG)**. |
 | **Delete** | Deletes the view. The last view can't be deleted. |
 
 ## The Views menu
@@ -57,7 +58,7 @@ Your changes to views, panes and pages are saved for you automatically.
 
 ## Export
 
-**To Excel** exports the view's values with their number formats, so Excel can calculate with them. **To CSV** exports the text as shown. Export works for **List** and **Pivot** views, not for **Graphics**, **KPI** or **Slicer** views. The Details pane has its own **Export**.
+**To Excel** exports the view's values with their number formats, so Excel can calculate with them. **To CSV** exports the text as shown. A **Graphics** or **KPI** view exports the data it shows as a table: its fields, filters and Top / Bottom limits, one row per member. A **Graphics** view also exports **As an image (PNG)**. **Slicer** and **Text** views have no export. The Details pane has its own **Export**.
 
 ## Status bar
 
