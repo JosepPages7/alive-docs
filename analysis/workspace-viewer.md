@@ -71,6 +71,14 @@ When the designer turned on **Show the status bar** in the workspace settings, a
 | F5 | Refresh. |
 | Esc | Closes the viewer, unless a field, a dialog or a menu has the focus. |
 
+## On a phone
+
+On a phone, or in any narrow window, the viewer adapts:
+
+- Each page shows its views in one pane, one view at a time. Choose a view's tab to switch. The panes you set up on a wider screen come back there.
+- The side panel opens over the views. Choose the arrow at its top to close it.
+- Touch and hold a pivot value, a group row, a chart mark or a KPI tile to open its menu, as a right-click does on a computer.
+
 ## Related information
 
 - [ALive Workspaces overview](workspaces-overview.md)
