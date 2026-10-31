@@ -16,10 +16,9 @@ An ALive query reads data from one table, or from several tables that are joined
 | Where | Who can use it | What you design |
 |---|---|---|
 | The **ALive Queries** page (search for it with Tell Me) | Users with the SUPER permission set | Saved queries that you can open again, export, import, and turn into AL code |
-| An ALive Sheet: **Queries** > **New Query…** or **Edit Query…** | Sheet administrators | A query stored in that sheet. Its result is written into worksheet cells. |
 | The **ALive Workspace Studio**: a workspace dataset that is a query | Workspace administrators | A query stored in that workspace dataset. See [Query datasets](workspace-query-dataset.md). |
 
-When the designer opens from a sheet or a workspace, it opens in its own window. The back arrow in its toolbar saves the query and closes the designer (F4). Ctrl+S saves without closing.
+When the designer opens from a workspace, it opens in its own window. The back arrow in its toolbar saves the query and closes the designer (F4). Ctrl+S saves without closing.
 
 ## The parts of the designer
 
@@ -52,6 +51,5 @@ When the designer opens from a sheet or a workspace, it opens in its own window.
 - [Query Advisor tips](query-advisor.md)
 - [Manage saved queries](query-saved-queries.md)
 - [Generate an AL query object](query-generate-al.md)
-- [Show query results in a sheet](sheet-queries.md)
 - [Troubleshoot the Query Designer](query-troubleshooting.md)
 - [Troubleshoot errors when a query runs](query-run-errors.md)

@@ -29,7 +29,7 @@ On the **Permissions** page, choose the permission set with the lookup instead o
 
 ### The ALive Analysis page is empty
 
-You have no workspace user permission set, or no workspace is shared with you yet. See [Open workspaces and sheets from ALive Analysis](alive-analysis-page.md).
+You have no workspace user permission set, or no workspace is shared with you yet. See [Open workspaces from ALive Analysis](alive-analysis-page.md).
 
 ## Opening from a card or list
 
@@ -67,7 +67,7 @@ Choose **Yes** to replace the workspace with the one in the file. It keeps its p
 
 ### The file "\<file\>" does not contain an ALive workspace.
 
-The .zip file doesn't come from a workspace export, for example it's a sheets or queries export. Import it on the matching page instead.
+The .zip file doesn't come from a workspace export, for example it's a queries export. Import it on the matching page instead.
 
 ## Related information
 

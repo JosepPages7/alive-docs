@@ -16,7 +16,7 @@ A developer can turn an ALive query into the AL source code of a Business Centra
 
 The file uses the current design, even if it isn't saved yet. Generating reads only the design, never data. It's a one-way conversion: the generated file can't be imported back into ALive.
 
-The **Generate** actions are only on the **ALive Queries** page. The Query Designer in a sheet or a workspace doesn't offer them.
+The **Generate** actions are only on the **ALive Queries** page. The Query Designer in a workspace doesn't offer them.
 
 ## Settings
 

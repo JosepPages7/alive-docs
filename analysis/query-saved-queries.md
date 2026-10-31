@@ -48,11 +48,10 @@ A dot in front of the title in the toolbar means the query has unsaved changes. 
 
 ## Use a saved query elsewhere
 
-- In an ALive Sheet, **New Query…** can start from a saved query. The sheet gets a copy: later changes to the saved query don't affect the sheet.
+- In the Workspace Studio, a query dataset can start from a saved query with **Start from an existing query…**. The workspace gets a copy: later changes to the saved query don't affect the workspace. See [Query datasets](workspace-query-dataset.md).
 - To turn a saved query into AL code, see [Generate an AL query object](query-generate-al.md).
 
 ## Related pages
 
 - [Build a query with the Query Designer](query-designer.md)
-- [Show query results in a sheet](sheet-queries.md)
 - [Troubleshoot the Query Designer](query-troubleshooting.md)

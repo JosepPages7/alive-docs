@@ -1,16 +1,16 @@
 ---
 title: ALive Analysis
-description: Help for ALive Analysis - workspaces with pivots, charts and KPIs, ALive Sheets and the Query Designer in Business Central.
+description: Help for ALive Analysis - workspaces with pivots, charts, KPIs and a Sheet view, and the Query Designer in Business Central.
 ---
 
 # ALive Analysis
 
-ALive Analysis adds workspaces, spreadsheet-style sheets and a visual query designer to Business Central, so users can analyze business data without leaving it.
+ALive Analysis adds workspaces and a visual query designer to Business Central, so users can analyze business data without leaving it.
 
 ## Get started
 
 - [ALive Analysis overview](alive-analysis-overview.md): what the app contains, which page each kind of user starts from, and which permission sets to assign.
-- [Open workspaces and sheets from ALive Analysis](alive-analysis-page.md): find and open the workspaces and sheets you're allowed to run.
+- [Open workspaces from ALive Analysis](alive-analysis-page.md): find and open the workspaces you're allowed to run.
 - [Who can see and run workspaces](workspace-permissions.md): administrators versus users, permission sets, and sharing a workspace with a permission set.
 
 ## Use a workspace
@@ -20,6 +20,7 @@ ALive Analysis adds workspaces, spreadsheet-style sheets and a visual query desi
 - [Arrange views in panes and pages](workspace-views-and-pages.md)
 - [List and pivot views](workspace-list-and-pivot.md)
 - [Chart, KPI and slicer views](workspace-charts-kpis-slicers.md)
+- [The Sheet view](workspace-sheet-view.md): a spreadsheet of formulas that read every dataset.
 - [Filter views and pages](workspace-filters.md)
 - [Drill down to source rows and Business Central pages](workspace-drilldown.md)
 - [Ask for filters at run](workspace-run-options.md)
@@ -54,18 +55,6 @@ ALive Analysis adds workspaces, spreadsheet-style sheets and a visual query desi
 - [Manage saved queries on the ALive Queries page](query-saved-queries.md)
 - [Generate an AL query object from an ALive query](query-generate-al.md)
 
-## ALive Sheets
-
-- [ALive Sheets overview](sheet-overview.md)
-- [Create and edit a sheet](sheet-create-and-edit.md)
-- [Show query results in a sheet](sheet-queries.md)
-- [Refresh query results in a sheet](sheet-query-refresh.md)
-- [Write and run a sheet script](sheet-scripts.md)
-- [Sheet functions for scripts](sheet-script-functions.md)
-- [Use formulas and custom functions in a sheet](sheet-formulas.md)
-- [Export and import sheets](sheet-export-import.md)
-- [Use and Edit access to a sheet](sheet-access.md)
-
 ## Troubleshooting
 
 - [Troubleshoot opening and saving workspaces](workspace-troubleshooting-access.md)
@@ -73,5 +62,3 @@ ALive Analysis adds workspaces, spreadsheet-style sheets and a visual query desi
 - [Troubleshoot report and financial report datasets](workspace-troubleshooting-reports.md)
 - [Troubleshoot the Query Designer](query-troubleshooting.md)
 - [Troubleshoot errors when a query runs](query-run-errors.md)
-- [Troubleshoot ALive Sheets](sheet-troubleshooting.md)
-- [Troubleshoot sheet script errors](sheet-script-errors.md)

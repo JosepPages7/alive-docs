@@ -50,6 +50,10 @@ A **Text** view shows headings, notes and live numbers next to the other views, 
 
 **Insert a column…** puts a column at the cursor. The numbers follow the view's filters and the page's, so a slicer changes them. The text is applied when you leave the box. A default view's text can be translated in the workspace's translations.
 
+## Sheet view
+
+An administrator can add one **Sheet** view to a workspace: a spreadsheet with formulas that read every dataset. See [The Sheet view](workspace-sheet-view.md).
+
 ## Your views and the default views
 
 Every change you make to views, panes and pages is saved for you automatically, per workspace. Other users don't see your changes.
@@ -72,3 +76,4 @@ The views and pane layout are saved in the workspace, and every user's own view 
 
 - [Use the workspace viewer](workspace-viewer.md)
 - [Filter views and pages](workspace-filters.md)
+- [The Sheet view](workspace-sheet-view.md)

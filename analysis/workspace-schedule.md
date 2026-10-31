@@ -101,16 +101,12 @@ One dataset couldn't run, so the whole run failed. The error after the colon is 
 
 The result is larger than the workspace's size limit. Narrow the filters you run it with, or ask the administrator to raise **Snapshot size limit (MB)**.
 
-### Only a workspace can be scheduled.
-
-You chose **Schedule...** on a sheet. Sheets can't be scheduled.
-
 ### Choose at least one day. / Choose the time of day.
 
 The **Schedule** dialog needs at least one day and a time when **Scheduled** is on.
 
 ## Related information
 
-- [Open workspaces and sheets from ALive Analysis](alive-analysis-page.md)
+- [Open workspaces from ALive Analysis](alive-analysis-page.md)
 - [Ask for filters at run](workspace-run-options.md)
 - [Use the workspace viewer](workspace-viewer.md)

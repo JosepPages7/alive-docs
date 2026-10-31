@@ -34,5 +34,5 @@ Programs are shared, so another user may have renamed or deleted a program while
 | "Invalid file name "*name*". The file name must end with ".json"." | The zip file contains other files than programs. Import only zip files exported from ALive Code. |
 | "Invalid file "*name*": the content is not valid JSON." | A file in the zip was changed or damaged. Export the program again. |
 | "Invalid version in file "*name*"." | The file has a format version that ALive Code doesn't recognize. Export the program again from ALive Code. |
-| "The file "*name*" does not contain an ALive program." | The zip comes from another ALive app, such as sheets exported from ALive Analysis. Import it in that app instead. |
+| "The file "*name*" does not contain an ALive program." | The zip comes from another ALive app, such as workspaces exported from ALive Analysis. Import it in that app instead. |
 | "Invalid file name: *name*" | A file in the zip has a name that isn't a valid program name. Rename it to a name without \ / : * ? " < > \|. |

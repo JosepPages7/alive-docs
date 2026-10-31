@@ -11,7 +11,7 @@ Find the message you see, then follow the fix. Parts in square brackets, such as
 
 | Message | Cause and fix |
 |---|---|
-| You must have SUPER permissions to access ALive Queries. | The **ALive Queries** page is for users with the SUPER permission set. Ask an administrator. Sheet and workspace administrators design their queries from the sheet or the **ALive Workspace Studio** instead. |
+| You must have SUPER permissions to access ALive Queries. | The **ALive Queries** page is for users with the SUPER permission set. Ask an administrator. Workspace administrators design their queries in the **ALive Workspace Studio** instead. |
 | [n] data item(s) skipped: table no longer exists. | A table of the saved query no longer exists, for example because its extension was uninstalled. Its box was dropped. Rebuild that part of the query and save. |
 | The saved definition is not valid JSON - starting empty. | The stored query can't be read. Design it again, or import it from an export. |
 
@@ -33,7 +33,7 @@ Find the message you see, then follow the fix. Parts in square brackets, such as
 | A query named "[name]" already exists. Please use a different name. | Names are unique, ignoring upper and lower case. Pick another name. |
 | You have unsaved changes. Do you want to save them before closing? | Not an error. Choose **Yes** to keep your changes. |
 | The ALive Query: "[name]" already exists. Do you want to overwrite it? | An imported query has the name of an existing one. Choose **No** to keep the existing query. |
-| The file "[file]" does not contain an ALive query. | The zip file is an export of something else, such as sheets or workspaces. |
+| The file "[file]" does not contain an ALive query. | The zip file is an export of something else, such as workspaces. |
 
 ## Generating AL
 
