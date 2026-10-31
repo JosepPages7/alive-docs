@@ -34,10 +34,6 @@ The **Sort**, **Show** and **Total** cells of the Company column can't be change
 - The row limit counts the rows of all companies together.
 - Fiscal date formulas, such as `<-FY>..<FY>`, use the accounting periods of the company you work in for every company.
 
-## Limits
-
-A multicompany query can't be turned into an AL query object, because an AL query always reads the company it runs in. Turn **Multi-company** off before you choose **Generate AL Query…**. See [Generate an AL query object](query-generate-al.md).
-
 ## Related pages
 
 - [Run a query and work with the results](query-run-and-results.md)

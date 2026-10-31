@@ -24,7 +24,6 @@ Search for these pages with **Tell me**.
 | --- | --- | --- |
 | **ALive Analysis** | Everyone who runs workspaces | Lists the workspaces you're allowed to run and opens them. See [Open workspaces from ALive Analysis](alive-analysis-page.md). |
 | **ALive Workspace Studio** | Workspace administrators | Create, design, share, export and import workspaces. See [Create a workspace in the Workspace Studio](workspace-studio.md). |
-| **ALive Queries** | Users with the SUPER permission set | Design and run standalone queries. |
 
 Users can also open workspaces from customer, vendor, item and other cards and lists with the **ALive Analysis** action. See [Open a workspace from a card or list](workspace-open-in-context.md).
 

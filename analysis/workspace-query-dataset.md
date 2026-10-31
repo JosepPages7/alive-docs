@@ -12,12 +12,12 @@ A query dataset reads Business Central tables through a query that you design in
 1. In the **ALive Workspace Studio**, in the **Datasets** panel, choose **Add** > **Query dataset**.
 2. Choose one of these:
    - **Design a new query…** opens the Query Designer on an empty query.
-   - **Start from an existing query…** opens the **Existing queries** list: the saved ALive Queries and the query datasets of the other workspaces. The query you pick is copied into this workspace.
-3. Design the query, then choose **Save** or **Save and close** (F4) in the designer. To learn how, see [Query Designer](query-designer.md).
+   - **Start from an existing query…** opens the **Existing queries** list: the query datasets of the saved workspaces. The query you pick is copied into this workspace.
+3. Design the query, then save it with Ctrl+S, or save and close the designer with the back arrow (F4). To learn how, see [Query Designer](query-designer.md).
 
 The Studio then creates one layout column per field of the query. A dataset that still has its default name takes the name of the query's main data item.
 
-The query is stored inside the workspace. Later changes to the saved query or workspace you started from don't change this dataset, and the other way around. To change the query, choose the pencil (**Edit the query…**) on the dataset.
+The query is stored inside the workspace. Later changes to the workspace you started from don't change this dataset, and the other way around. To change the query, choose the pencil (**Edit the query…**) on the dataset.
 
 ## Filters at run
 
