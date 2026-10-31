@@ -27,10 +27,8 @@ When you add dimensions from the chip, the Dimension Set ID field itself is adde
 - A record without a value for a dimension gives a blank cell.
 - With **Totals** on, the query groups by the dimension columns, so you get totals per dimension value.
 - Dimension columns have no **Filter** cell in the field grid.
-- When you generate an AL query object, dimension columns are left out and marked with a TODO comment.
 
 ## Related pages
 
 - [Choose fields, filters and sorting](query-fields-and-filters.md)
 - [Group and total rows in a query](query-totals.md)
-- [Generate an AL query object](query-generate-al.md)

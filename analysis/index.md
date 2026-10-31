@@ -52,8 +52,6 @@ ALive Analysis adds workspaces and a visual query designer to Business Central, 
 - [Run a query in several companies](query-multi-company.md)
 - [Run a query and work with the results](query-run-and-results.md)
 - [Query Advisor tips](query-advisor.md)
-- [Manage saved queries on the ALive Queries page](query-saved-queries.md)
-- [Generate an AL query object from an ALive query](query-generate-al.md)
 
 ## Troubleshooting
 

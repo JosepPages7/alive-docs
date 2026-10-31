@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the Query Designer
-description: The messages the ALive Query Designer shows when you open it, design joins, save, export, import or generate AL, with their causes and fixes.
+description: The messages the ALive Query Designer shows when you open it or design joins, with their causes and fixes.
 ---
 
 # Troubleshoot the Query Designer
@@ -11,9 +11,9 @@ Find the message you see, then follow the fix. Parts in square brackets, such as
 
 | Message | Cause and fix |
 |---|---|
-| You must have SUPER permissions to access ALive Queries. | The **ALive Queries** page is for users with the SUPER permission set. Ask an administrator. Workspace administrators design their queries in the **ALive Workspace Studio** instead. |
-| [n] data item(s) skipped: table no longer exists. | A table of the saved query no longer exists, for example because its extension was uninstalled. Its box was dropped. Rebuild that part of the query and save. |
-| The saved definition is not valid JSON - starting empty. | The stored query can't be read. Design it again, or import it from an export. |
+| The query designer must be opened from the Workspace Studio. | The Query Designer has no page of its own. Open it from a query dataset in the **ALive Workspace Studio**. |
+| [n] data item(s) skipped: table no longer exists. | A table of the query no longer exists, for example because its extension was uninstalled. Its box was dropped. Rebuild that part of the query and save. |
+| The saved definition is not valid JSON - starting empty. | The stored query can't be read. Design it again. |
 
 ## Designing joins
 
@@ -25,27 +25,6 @@ Find the message you see, then follow the fix. Parts in square brackets, such as
 | Choose the join fields first. | Fill in at least one **Child field** and **Parent field** pair. |
 | Only one side of a join can be a FlowFilter - link it to a field of the table it relates to. | Two FlowFilters can't be joined. Drag the FlowFilter onto a normal field of its related table. |
 
-## Saving, exporting and importing
-
-| Message | Cause and fix |
-|---|---|
-| The query name is not valid. It cannot contain any of the following characters: \ / : * ? " < > \| | Remove those characters from the name. |
-| A query named "[name]" already exists. Please use a different name. | Names are unique, ignoring upper and lower case. Pick another name. |
-| You have unsaved changes. Do you want to save them before closing? | Not an error. Choose **Yes** to keep your changes. |
-| The ALive Query: "[name]" already exists. Do you want to overwrite it? | An imported query has the name of an existing one. Choose **No** to keep the existing query. |
-| The file "[file]" does not contain an ALive query. | The zip file is an export of something else, such as workspaces. |
-
-## Generating AL
-
-| Message | Cause and fix |
-|---|---|
-| Generating an AL query is not possible for a multicompany query | An AL query always reads the company it runs in. Turn **Multi-company** off, then generate. |
-| The query name must be 1 to 30 characters long. | Shorten the **Query name** in the **Generate AL Query** dialog. |
-| The API version must look like v1.0 or beta. | Correct the **API version**. |
-| The [setting] must start with a lowercase letter and contain only letters and digits | Correct the API publisher, API group, entity name or entity set name, for example `alive`. |
-
 ## Related pages
 
 - [Troubleshoot errors when a query runs](query-run-errors.md)
-- [Manage saved queries](query-saved-queries.md)
-- [Generate an AL query object](query-generate-al.md)

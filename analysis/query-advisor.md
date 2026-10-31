@@ -11,7 +11,7 @@ The Query Advisor reads the query you design and suggests how to get the same re
 
 - Its tips appear in the notes bar under the field grid, marked with a light bulb. Choose a tip to read the details.
 - The tips update while you edit the query. A tip shows as long as it applies, and it can't be hidden.
-- It works wherever the Query Designer opens: the **ALive Queries** page and a workspace query.
+- It works on every query you design in a workspace.
 - It only reads the query design, Business Central's table and field definitions and, for one tip, the approximate number of rows of a table. It never changes your query, and nothing leaves Business Central. You decide whether to follow a tip.
 
 ## The tips
