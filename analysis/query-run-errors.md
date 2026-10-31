@@ -5,7 +5,7 @@ description: The error messages an ALive query shows when you run it, what cause
 
 # Troubleshoot errors when a query runs
 
-Find the message you see, then follow the fix. Parts in square brackets, such as [table], are replaced by the names from your query. When a sheet refreshes a query, these messages appear after **Query [name] could not be refreshed:**.
+Find the message you see, then follow the fix. Parts in square brackets, such as [table], are replaced by the names from your query.
 
 ## Missing tables, fields or joins
 

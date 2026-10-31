@@ -61,5 +61,4 @@ The notes bar under the field grid tells you about the query before you run it. 
 ## Related pages
 
 - [Run a query in several companies](query-multi-company.md)
-- [Show query results in a sheet](sheet-queries.md)
 - [Troubleshoot errors when a query runs](query-run-errors.md)

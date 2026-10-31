@@ -51,11 +51,7 @@ Sharing a workspace doesn't give access to data. Each user sees only what their 
 
 Sharing controls which workspaces a user can see and run. It doesn't hide workspace designs at the database level: the **ALive Workspaces User** permission set can read every workspace definition.
 
-## ALive Sheets
-
-ALive Sheets use the same permissions page with an extra **Access Level** column, and their own permission sets, **ALive Sheets Admin** and **ALive Sheets User**. A workspace administrator can't share sheets, and a sheet administrator can't share workspaces. See [Use and Edit access to a sheet](sheet-access.md).
-
 ## Related information
 
-- [Open workspaces and sheets from ALive Analysis](alive-analysis-page.md)
+- [Open workspaces from ALive Analysis](alive-analysis-page.md)
 - [Troubleshoot opening and saving workspaces](workspace-troubleshooting-access.md)

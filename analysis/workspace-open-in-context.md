@@ -63,5 +63,5 @@ Design the datasets so they can be narrowed: include a table or field related to
 
 ## Related information
 
-- [Open workspaces and sheets from ALive Analysis](alive-analysis-page.md)
+- [Open workspaces from ALive Analysis](alive-analysis-page.md)
 - [Troubleshoot opening and saving workspaces](workspace-troubleshooting-access.md)

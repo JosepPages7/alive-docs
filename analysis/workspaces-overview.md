@@ -13,7 +13,7 @@ A workspace is a saved analysis that collects data from one or more sources and 
 | --- | --- |
 | **Dataset** | One set of rows. Each dataset has exactly one source, chosen when you add it: a query, a script (code), a Business Central report or a Business Central financial report. A workspace can have several datasets. See [Add and manage datasets](workspace-datasets.md). |
 | **Layout columns** | The columns a dataset offers to its views: their titles, formats, totals, calculated columns and what a click on a cell opens. See [Design the layout columns of a dataset](workspace-layout-columns.md). |
-| **View** | A tab that shows one dataset in one of five modes: **List**, **Pivot**, **Graphics**, **KPI** or **Slicer**. A workspace can have many views of the same dataset. |
+| **View** | A tab that shows one dataset in one of these modes: **List**, **Pivot**, **Graphics**, **KPI**, **Slicer** or **Text**. A workspace can have many views of the same dataset. A workspace can also have one **Sheet** view, a spreadsheet whose formulas read every dataset. See [The Sheet view](workspace-sheet-view.md). |
 | **Pane** | An area of the screen that holds one or more views as tabs. Views can sit side by side or one above the other. |
 | **Page** | A set of panes. A workspace with several pages shows page tabs along the bottom of the viewer. |
 
@@ -28,7 +28,7 @@ A workspace is a saved analysis that collects data from one or more sources and 
 2. The datasets run one after the other. Rows appear in the views as they arrive. If one dataset fails, its views show the error and the other datasets still load.
 3. **Refresh** (F5) runs the workspace again with the same filters. In the **Views** menu, **Run options…** asks for the filters again.
 
-Only datasets that at least one view shows are run.
+Only datasets that at least one view shows are run. A workspace with a Sheet view runs all its datasets.
 
 ## Default views and your own views
 

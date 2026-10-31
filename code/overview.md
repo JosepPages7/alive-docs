@@ -46,7 +46,7 @@ Search for **ALive Code** or **ALive Data Explorer** with Tell Me. You can also 
 
 ## ALive Code and ALive Analysis
 
-ALive Analysis is a separate app for sheets and workspaces, where scripts can only read data. ALive Code doesn't need ALive Analysis, and you can install either app on its own.
+ALive Analysis is a separate app for workspaces, where scripts can only read data. ALive Code doesn't need ALive Analysis, and you can install either app on its own.
 
 ## Next steps
 

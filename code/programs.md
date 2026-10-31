@@ -52,7 +52,7 @@ The browser downloads a zip file with one file per program. A single program is 
     - When one exists, answer the question whether to overwrite it.
 4. A message shows how many programs were inserted, modified and skipped.
 
-Import only replaces the code of a program. Files exported from other ALive apps, such as sheets from ALive Analysis, can't be imported here. For import errors, go to [Troubleshoot ALive Code](troubleshooting.md).
+Import only replaces the code of a program. Files exported from other ALive apps, such as workspaces from ALive Analysis, can't be imported here. For import errors, go to [Troubleshoot ALive Code](troubleshooting.md).
 
 ## Related information
 

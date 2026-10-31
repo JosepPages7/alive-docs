@@ -43,7 +43,7 @@ The column shows the first day of each period. Weeks start on Monday, and semest
 | Note | What it means |
 |---|---|
 | **Totals grouped in memory** | A Totals run reads every row that passes the filters, so it can take a long time on big tables. Filter first. The row limit caps the number of groups shown, not the rows read, so the totals shown are always exact. |
-| **Amounts on Group By** | A decimal column is still set to **Group By**. Every distinct amount becomes its own group, and rows with the same amount collapse into one, so anything that sums the result later (a pivot, a sheet) comes out too low. Set its **Total** to **Sum**, or group by the whole primary key of its table. |
+| **Amounts on Group By** | A decimal column is still set to **Group By**. Every distinct amount becomes its own group, and rows with the same amount collapse into one, so anything that sums the result later (a pivot or a Sheet view formula) comes out too low. Set its **Total** to **Sum**, or group by the whole primary key of its table. |
 
 When the row limit cuts a Totals run short, the status reads **First N groups (row limit reached; the shown totals are exact)**.
 
