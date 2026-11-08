@@ -22,10 +22,10 @@ Search for these pages with **Tell me**.
 
 | Page | Who uses it | What it's for |
 | --- | --- | --- |
-| **ALive Analysis** | Everyone who runs workspaces | Lists the workspaces you're allowed to run and opens them. See [Open workspaces from ALive Analysis](alive-analysis-page.md). |
+| **ALive Workspaces** | Everyone who runs workspaces | Lists the workspaces you're allowed to run and opens them. See [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md). |
 | **ALive Workspace Studio** | Workspace administrators | Create, design, share, export and import workspaces. See [Create a workspace in the Workspace Studio](workspace-studio.md). |
 
-Users can also open workspaces from customer, vendor, item and other cards and lists with the **ALive Analysis** action. See [Open a workspace from a card or list](workspace-open-in-context.md).
+Users can also open workspaces from customer, vendor, item and other cards and lists with the **ALive Workspaces** action. See [Open a workspace from a card or list](workspace-open-in-context.md).
 
 ## Permission sets
 

@@ -43,7 +43,7 @@ Tip: create one permission set per audience, such as a sales team set, assign it
 
 ## What users see
 
-Users find their workspaces on the **ALive Analysis** page, which lists only what they may run. The **ALive Analysis** action on cards and lists also opens only workspaces they may run. These checks also apply when the workspace runs, not only in the lists.
+Users find their workspaces on the **ALive Workspaces** page, which lists only what they may run. The **ALive Workspaces** action on cards and lists also opens only workspaces they may run. These checks also apply when the workspace runs, not only in the lists.
 
 ## Data permissions still apply
 
@@ -53,5 +53,5 @@ Sharing controls which workspaces a user can see and run. It doesn't hide worksp
 
 ## Related information
 
-- [Open workspaces from ALive Analysis](alive-analysis-page.md)
+- [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md)
 - [Troubleshoot opening and saving workspaces](workspace-troubleshooting-access.md)

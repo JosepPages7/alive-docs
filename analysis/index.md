@@ -10,7 +10,7 @@ ALive Analysis adds workspaces and a visual query designer to Business Central, 
 ## Get started
 
 - [ALive Analysis overview](alive-analysis-overview.md): what the app contains, which page each kind of user starts from, and which permission sets to assign.
-- [Open workspaces from ALive Analysis](alive-analysis-page.md): find and open the workspaces you're allowed to run.
+- [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md): find and open the workspaces you're allowed to run.
 - [Who can see and run workspaces](workspace-permissions.md): administrators versus users, permission sets, and sharing a workspace with a permission set.
 
 ## Use a workspace

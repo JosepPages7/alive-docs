@@ -11,7 +11,7 @@ A scheduled run is personal: it reads the data with your own permissions, and on
 
 ## Schedule a workspace
 
-1. Choose the search icon, enter **ALive Analysis**, and then choose the related link.
+1. Choose the search icon, enter **ALive Workspaces**, and then choose the related link.
 2. Select the workspace and choose **Schedule...**.
 3. If the workspace's datasets ask for filters or options, the run dialog opens first. The values you choose there are the ones every scheduled run uses. Choose **Cancel** to schedule nothing.
 4. In the **Schedule** dialog, make sure **Scheduled** is on, then choose the **Time** and the days, from **Monday** to **Sunday**. A new schedule starts as Monday to Friday at 06:00.
@@ -19,13 +19,13 @@ A scheduled run is personal: it reads the data with your own permissions, and on
 
 The workspace runs at that time on the chosen days, at most once a day. The first run is at the next chosen day and time.
 
-The **Schedule** column of the **ALive Analysis** page shows your schedule of each workspace, for example **Mon-Fri 06:00**, **Every day 06:00** or **Mon, Wed 06:00**. When the job isn't waiting for its next run, its status follows, for example **(Error)** or **(On Hold)**.
+The **Schedule** column of the **ALive Workspaces** page shows your schedule of each workspace, for example **Mon-Fri 06:00**, **Every day 06:00** or **Mon, Wed 06:00**. When the job isn't waiting for its next run, its status follows, for example **(Error)** or **(On Hold)**.
 
 The schedule is a job queue entry named **ALive workspace snapshot: \<workspace\>**. It also shows on the **Job Queue Entries** page, where you can see its log or run it once now.
 
 ## Change or remove a schedule
 
-1. On the **ALive Analysis** page, select the workspace and choose **Schedule...**.
+1. On the **ALive Workspaces** page, select the workspace and choose **Schedule...**.
 2. Change the time or the days, or turn **Scheduled** off to remove the schedule.
 3. Choose **OK**.
 
@@ -107,6 +107,6 @@ The **Schedule** dialog needs at least one day and a time when **Scheduled** is 
 
 ## Related information
 
-- [Open workspaces from ALive Analysis](alive-analysis-page.md)
+- [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md)
 - [Ask for filters at run](workspace-run-options.md)
 - [Use the workspace viewer](workspace-viewer.md)

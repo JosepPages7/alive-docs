@@ -1,15 +1,15 @@
 ---
-title: Open workspaces from ALive Analysis
-description: How to find and open the workspaces you're allowed to run from the ALive Analysis page.
+title: Open workspaces from the ALive Workspaces page
+description: How to find and open the workspaces you're allowed to run from the ALive Workspaces page.
 ---
 
-# Open workspaces from ALive Analysis
+# Open workspaces from the ALive Workspaces page
 
-The **ALive Analysis** page lists every workspace you're allowed to run, so you can open any of them in one step.
+The **ALive Workspaces** page lists every workspace you're allowed to run, so you can open any of them in one step.
 
 ## Open a workspace
 
-1. Choose the search icon, enter **ALive Analysis**, and then choose the related link.
+1. Choose the search icon, enter **ALive Workspaces**, and then choose the related link.
 2. Find the workspace in the list. The workspaces are listed by name.
 3. Choose the name, or select the line and choose **Open**.
 
@@ -34,7 +34,7 @@ On a phone, the list shows only the names.
 
 ## Opened from a card or list
 
-When you choose the **ALive Analysis** action on a card or list, for example on a customer, the page title names the record, such as **ALive Analysis - Customer 10000 · Adatum Corporation**. The page then lists only the workspaces that open from that kind of record, and each one opens filtered to the record. This list appears only when more than one workspace opens from that kind of record. See [Open a workspace from a card or list](workspace-open-in-context.md).
+When you choose the **ALive Workspaces** action on a card or list, for example on a customer, the page title names the record, such as **ALive Workspaces - Customer 10000 · Adatum Corporation**. The page then lists only the workspaces that open from that kind of record, and each one opens filtered to the record. This list appears only when more than one workspace opens from that kind of record. See [Open a workspace from a card or list](workspace-open-in-context.md).
 
 ## The list is empty
 
