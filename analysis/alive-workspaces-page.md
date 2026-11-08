@@ -1,15 +1,15 @@
 ---
-title: Open workspaces from ALive Analysis
-description: How to find and open the workspaces you're allowed to run from the ALive Analysis page.
+title: ALive Workspaces
+description: How to find and open the workspaces you're allowed to run from the ALive Workspaces page.
 ---
 
-# Open workspaces from ALive Analysis
+# ALive Workspaces
 
-The **ALive Analysis** page lists every workspace you're allowed to run, so you can open any of them in one step.
+The **ALive Workspaces** page lists every workspace you're allowed to run, so you can open any of them in one step.
 
 ## Open a workspace
 
-1. Choose the search icon, enter **ALive Analysis**, and then choose the related link.
+1. Choose the search icon, enter **ALive Workspaces**, and then choose the related link.
 2. Find the workspace in the list. The workspaces are listed by name.
 3. Choose the name, or select the line and choose **Open**.
 
@@ -19,7 +19,7 @@ A workspace opens in the workspace viewer and runs at once. If its datasets ask 
 
 | Field | What it shows |
 | --- | --- |
-| **Name** | The name of the workspace. This is its title in your language when the designer translated it. |
+| **Name** | The name of the workspace. This is its title in your language when the designer translated it. When two or more workspaces have the same title, each shows its workspace name instead, so you can tell them apart. |
 | **Description** | What the workspace shows. |
 | **Schedule** | Your schedule of the workspace in this company, such as **Mon-Fri 06:00**, followed by the job's status when it isn't waiting for its next run. Shown only to users who can schedule. |
 
@@ -34,7 +34,7 @@ On a phone, the list shows only the names.
 
 ## Opened from a card or list
 
-When you choose the **ALive Analysis** action on a card or list, for example on a customer, the page title names the record, such as **ALive Analysis - Customer 10000 · Adatum Corporation**. The page then lists only the workspaces that open from that kind of record, and each one opens filtered to the record. This list appears only when more than one workspace opens from that kind of record. See [Open a workspace from a card or list](workspace-open-in-context.md).
+When you choose the **ALive Workspaces** action on a card or list, for example on a customer, the page title names the record, such as **ALive Workspaces - Customer 10000 · Adatum Corporation**. The page then lists only the workspaces that open from that kind of record, and each one opens filtered to the record. This list appears only when more than one workspace opens from that kind of record. See [Open a workspace from a card or list](workspace-open-in-context.md).
 
 ## The list is empty
 

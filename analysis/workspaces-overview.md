@@ -20,7 +20,7 @@ A workspace is a saved analysis that collects data from one or more sources and 
 ## Who does what
 
 - **Administrators** (the **ALive Workspaces Admin** permission set) design workspaces in the **ALive Workspace Studio**, arrange the default views, and decide who can run each workspace.
-- **Users** (the **ALive Workspaces User** permission set) run the workspaces shared with them from the **ALive Analysis** page or from the **ALive Analysis** action on cards and lists.
+- **Users** (the **ALive Workspaces User** permission set) run the workspaces shared with them from the **ALive Workspaces** page or from the **ALive Workspaces** action on cards and lists.
 
 ## How a workspace runs
 

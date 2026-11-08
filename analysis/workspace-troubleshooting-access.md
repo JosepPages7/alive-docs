@@ -27,9 +27,9 @@ Default views can only be saved from a viewer opened with **Run** in the Studio.
 
 On the **Permissions** page, choose the permission set with the lookup instead of typing it.
 
-### The ALive Analysis page is empty
+### The ALive Workspaces page is empty
 
-You have no workspace user permission set, or no workspace is shared with you yet. See [Open workspaces from ALive Analysis](alive-analysis-page.md).
+You have no workspace user permission set, or no workspace is shared with you yet. See [ALive Workspaces](alive-workspaces-page.md).
 
 ## Opening from a card or list
 
@@ -41,7 +41,7 @@ No workspace you can run is set to open from this kind of record. An administrat
 
 Heading accounts have no amounts. Choose the action on a posting or total account.
 
-### ALive Analysis can open in the context of a record with a one-field key only (\<table\> has \<n\>).
+### ALive Workspaces can open in the context of a record with a one-field key only (\<table\> has \<n\>).
 
 An extension added the action to a page whose records have a key of several fields. Workspaces can open only for records with a one-field key.
 

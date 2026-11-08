@@ -7,7 +7,7 @@ description: How the workspace viewer is laid out, how to work with view tabs, t
 
 The workspace viewer runs a workspace and shows its datasets in views that you can switch, change, filter and export.
 
-The viewer opens when you open a workspace from the **ALive Analysis** page, from the **ALive Analysis** action on a card or list, or with **Run** in the Workspace Studio. Its heading reads **ALive Workspace ·** followed by the workspace title.
+The viewer opens when you open a workspace from the **ALive Workspaces** page, from the **ALive Workspaces** action on a card or list, or with **Run** in the Workspace Studio. Its heading reads **ALive Workspace ·** followed by the workspace title.
 
 ## The parts of the viewer
 
