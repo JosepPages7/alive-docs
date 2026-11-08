@@ -19,7 +19,7 @@ A workspace opens in the workspace viewer and runs at once. If its datasets ask 
 
 | Field | What it shows |
 | --- | --- |
-| **Name** | The name of the workspace. This is its title in your language when the designer translated it. |
+| **Name** | The name of the workspace. This is its title in your language when the designer translated it. When two or more workspaces have the same title, each shows its workspace name instead, so you can tell them apart. |
 | **Description** | What the workspace shows. |
 | **Schedule** | Your schedule of the workspace in this company, such as **Mon-Fri 06:00**, followed by the job's status when it isn't waiting for its next run. Shown only to users who can schedule. |
 
