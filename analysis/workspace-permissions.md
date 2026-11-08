@@ -53,5 +53,5 @@ Sharing controls which workspaces a user can see and run. It doesn't hide worksp
 
 ## Related information
 
-- [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md)
+- [ALive Workspaces](alive-workspaces-page.md)
 - [Troubleshoot opening and saving workspaces](workspace-troubleshooting-access.md)

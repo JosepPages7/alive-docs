@@ -29,7 +29,7 @@ On the **Permissions** page, choose the permission set with the lookup instead o
 
 ### The ALive Workspaces page is empty
 
-You have no workspace user permission set, or no workspace is shared with you yet. See [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md).
+You have no workspace user permission set, or no workspace is shared with you yet. See [ALive Workspaces](alive-workspaces-page.md).
 
 ## Opening from a card or list
 

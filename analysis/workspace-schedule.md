@@ -107,6 +107,6 @@ The **Schedule** dialog needs at least one day and a time when **Scheduled** is 
 
 ## Related information
 
-- [Open workspaces from the ALive Workspaces page](alive-workspaces-page.md)
+- [ALive Workspaces](alive-workspaces-page.md)
 - [Ask for filters at run](workspace-run-options.md)
 - [Use the workspace viewer](workspace-viewer.md)

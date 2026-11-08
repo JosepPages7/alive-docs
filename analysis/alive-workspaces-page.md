@@ -1,9 +1,9 @@
 ---
-title: Open workspaces from the ALive Workspaces page
+title: ALive Workspaces
 description: How to find and open the workspaces you're allowed to run from the ALive Workspaces page.
 ---
 
-# Open workspaces from the ALive Workspaces page
+# ALive Workspaces
 
 The **ALive Workspaces** page lists every workspace you're allowed to run, so you can open any of them in one step.
 
