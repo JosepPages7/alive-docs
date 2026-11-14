@@ -17,6 +17,8 @@ The Studio creates the workspace, named after the template (with a number, such 
 
 The templates' titles and texts are also available in Spanish. The worksheet labels of the **Financial ratios** and **Sales scorecard** Sheet views are in English for every user.
 
+No template contains a financial report, because financial reports are your company's own. To start from them, choose **From a financial report…** instead. See [Financial report datasets](workspace-financial-report-dataset.md).
+
 ## The templates
 
 | Template | What it shows |

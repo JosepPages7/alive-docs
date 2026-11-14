@@ -44,12 +44,13 @@ Open the dataset's **⋯** menu (Dataset actions), or right-click the dataset:
 | Setting | What it does |
 | --- | --- |
 | **Ask for the report options at run** | Report datasets. Shows the report's request page when a user runs the workspace, filled in with their last options. Off means the options set in the Studio always apply. |
-| **Ask for the financial report options at run** | Financial report datasets. Shows the options (dates, dimensions, budget and so on) when a user runs the workspace, filled in with their last options. |
 | **Output** | Code datasets. The script output this dataset shows. Blank means the rows the script adds before it chooses any output. |
 | **Let users add calculated columns** | Lets users of the viewer add their own calculated columns to the views of this dataset. |
 | **Rows in the first message** | How many rows reach the viewer in the first batch. Each next batch doubles, up to 20,000 rows. |
 | **Rows read to discover the columns** | Query and code datasets. How many rows the Studio reads when it discovers the dataset's columns. |
 | **Max rows (0 = all)** | The most rows a run reads. 0 means no limit. |
+
+A financial report dataset has its switch, **Ask for these options at run**, in its **Financial report options** dialog (the pencil) instead. See [Financial report datasets](workspace-financial-report-dataset.md).
 
 Query and code datasets ask for filters at run on their own: a query asks when it has **Ask at run** fields, a script asks when it has a request page. See [Ask for filters at run](workspace-run-options.md).
 
