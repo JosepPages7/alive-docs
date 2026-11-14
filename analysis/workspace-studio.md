@@ -22,7 +22,7 @@ You need the **ALive Workspaces Admin** permission set (or SUPER) to open the St
 ## Create a workspace
 
 1. Choose the search icon, enter **ALive Workspace Studio**, and then choose the related link.
-2. In the **Workspaces** panel, choose **+**, and then choose **Blank workspace**. To start from a ready-made workspace, choose **From a template** instead, and then choose a template in its submenu. See [Starter templates](workspace-templates.md). To start from your company's own financial reports, such as the balance sheet or the income statement, choose **From a financial report…**. See [Financial report datasets](workspace-financial-report-dataset.md).
+2. In the **Workspaces** panel, choose **+**, and then choose **Blank workspace**. To start from a ready-made workspace, choose **From a template…** instead, and then choose a template in the **New from a template** dialog. See [Starter templates](workspace-templates.md). To start from your company's own financial reports, such as the balance sheet or the income statement, choose **From a financial report…**. See [Financial report datasets](workspace-financial-report-dataset.md).
 3. The new workspace is named **New** (or **New 2**, and so on). To rename it, double-click its name, or select it and press F2.
 4. In the **Datasets** panel, choose **Add** and pick the kind of dataset. See [Add and manage datasets](workspace-datasets.md).
 5. Adjust the layout columns of each dataset. See [Design the layout columns of a dataset](workspace-layout-columns.md).

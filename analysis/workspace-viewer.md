@@ -14,7 +14,7 @@ The viewer opens when you open a workspace from the **ALive Workspaces** page, f
 | Part | What it's for |
 | --- | --- |
 | Panes and view tabs | Each tab is a view of one dataset. Choose **+** after the tabs to add a view; with several datasets, you pick which one. |
-| Side panel (right edge) | Three panels: **View** (the mode and its fields), **Filters** and **Calculated**. Choose a button to open its panel and again to close it. Drag the panel's edge to resize it. |
+| Side panel (right edge) | Three panels: **View** (the mode and its fields), **Filters** and **Calculated**. Choose a button to open its panel and again to close it. Drag the panel's edge to resize it. The panel starts closed in a workspace that has designed views, such as one created from a template, and open in a new blank workspace; after that, each workspace keeps it as you left it. |
 | Buttons at the bottom of the right edge | The **Views** menu, **Refresh** (F5) and **Full screen**. |
 | Page tabs (bottom) | Shown when the workspace has two or more pages. |
 | Filter bar (top) | Shown when page filters exist. See [Filter views and pages](workspace-filters.md). It also shows **Data as of \<date and time\>** when the workspace opened with your scheduled result; **Refresh** runs it with the current data. See [Schedule a workspace to run in the background](workspace-schedule.md). |
