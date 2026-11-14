@@ -14,7 +14,7 @@ A workspace can ask users for filters and options each time it runs, such as the
 | Query | Its query has fields marked **Ask at run** in the Query Designer | Business Central's filter dialog |
 | Code (script) | Its script has a request page | The script's request page |
 | Report | **Ask for the report options at run** is on in its dataset settings | The report's request page |
-| Financial report | **Ask for the financial report options at run** is on in its dataset settings | The **Financial report options** dialog |
+| Financial report | **Ask for these options at run** is on in its **Financial report options** dialog in the Studio (on for a new dataset) | The **Financial report options** dialog |
 
 A dataset that doesn't ask always runs with the filters and options its designer set.
 
