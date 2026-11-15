@@ -5,7 +5,7 @@ description: The ready-made workspaces that ship with ALive Analysis, grouped by
 
 # Starter templates
 
-ALive Analysis includes 30 ready-made workspaces, called templates, that you can create in one step and then adapt.
+ALive Analysis includes 31 ready-made workspaces, called templates, that you can create in one step and then adapt.
 
 ## Create a workspace from a template
 
@@ -38,7 +38,7 @@ For a template that reads entries:
 - Run it for a short period. See [Ask for filters at run](workspace-run-options.md).
 - Or schedule it, so it runs in the background and opens at once with that data. You schedule a workspace on the **ALive Workspaces** page, and a scheduled run is personal. See [Schedule a workspace to run in the background](workspace-schedule.md).
 
-Seven templates read entries: **Receivables & payables aging**, **Cash flow forecast**, **G/L activity detail**, **Item sales by customer**, **Payment behaviour**, **Returns** and **System health**. The other 23 are fast.
+Seven templates read entries: **Receivables & payables aging**, **Cash flow forecast**, **G/L activity detail**, **Item sales by customer**, **Payment behaviour**, **Returns** and **System health**. The other 24 are fast.
 
 ## The templates
 
@@ -101,6 +101,7 @@ Most templates ask for the period when they run and start from a default period,
 | Template | What it shows | Mark | Default period |
 | --- | --- | --- | --- |
 | **Service orders** | The open service orders: by status, priority and type, the ones past their response date and the service items not yet allocated, and their service item lines by repair status, fault code and symptom code. **Response** reads the dates: an order with a starting date is **Started**; otherwise it is **Overdue** when its response date is before the work date. Service Management needs the Premium licence. | Fast | None |
+| **Service contracts and items** | Each service contract with its own figures for the period, as on the Contract Statistics page: annual amount, invoiced, cost and profit, by contract group and by expiry. A second page shows each service item month by month: what was invoiced against the cost of the usage, and the parts and resources spent. Contract quotes and templates aren't included. Service Management needs the Premium licence. | Fast | Last 12 months |
 
 ### Management
 
@@ -120,7 +121,7 @@ Most templates include a **How to read** panel that explains their figures, for 
 
 ## Open a template's workspace from a record
 
-Some templates open from a card or a list, already filtered to that record: for example **Sales analysis** from a customer, **Purchase analysis** from a vendor, **Actual vs budget**, **G/L by period** and **G/L activity detail** from a G/L account, **Cash position** from a bank account, **Projects** from a project, **Fixed assets** from a fixed asset and **Service orders** from a customer. See [Open a workspace from a card or list](workspace-open-in-context.md).
+Some templates open from a card or a list, already filtered to that record: for example **Sales analysis** from a customer, **Purchase analysis** from a vendor, **Actual vs budget**, **G/L by period** and **G/L activity detail** from a G/L account, **Cash position** from a bank account, **Projects** from a project, **Fixed assets** from a fixed asset and **Service orders** and **Service contracts and items** from a customer. See [Open a workspace from a card or list](workspace-open-in-context.md).
 
 ## Adapt a template
 
