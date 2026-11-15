@@ -5,7 +5,7 @@ description: The ready-made workspaces that ship with ALive Analysis, grouped by
 
 # Starter templates
 
-ALive Analysis includes 29 ready-made workspaces, called templates, that you can create in one step and then adapt.
+ALive Analysis includes 30 ready-made workspaces, called templates, that you can create in one step and then adapt.
 
 ## Create a workspace from a template
 
@@ -38,7 +38,7 @@ For a template that reads entries:
 - Run it for a short period. See [Ask for filters at run](workspace-run-options.md).
 - Or schedule it, so it runs in the background and opens at once with that data. You schedule a workspace on the **ALive Workspaces** page, and a scheduled run is personal. See [Schedule a workspace to run in the background](workspace-schedule.md).
 
-Seven templates read entries: **Receivables & payables aging**, **Cash flow forecast**, **G/L activity detail**, **Item sales by customer**, **Payment behaviour**, **Returns** and **System health**. The other 22 are fast.
+Seven templates read entries: **Receivables & payables aging**, **Cash flow forecast**, **G/L activity detail**, **Item sales by customer**, **Payment behaviour**, **Returns** and **System health**. The other 23 are fast.
 
 ## The templates
 
@@ -96,6 +96,12 @@ Most templates ask for the period when they run and start from a default period,
 | **Production orders** | The open production orders (planned, firm planned and released): remaining quantity, expected cost and progress by status and due date, the components still to consume, and the load of the work centers against their capacity. | Fast | This year |
 | **Projects** | Each project and its tasks: budget cost against actual cost, billable against invoiced and what is left to invoice, and the actual cost and invoicing month by month. | Fast | Last 12 months |
 
+### Service
+
+| Template | What it shows | Mark | Default period |
+| --- | --- | --- | --- |
+| **Service orders** | The open service orders: by status, priority and type, the ones past their response date and the service items not yet allocated, and their service item lines by repair status, fault code and symptom code. **Response** reads the dates: an order with a starting date is **Started**; otherwise it is **Overdue** when its response date is before the work date. Service Management needs the Premium licence. | Fast | None |
+
 ### Management
 
 | Template | What it shows | Mark | Default period |
@@ -114,7 +120,7 @@ Most templates include a **How to read** panel that explains their figures, for 
 
 ## Open a template's workspace from a record
 
-Some templates open from a card or a list, already filtered to that record: for example **Sales analysis** from a customer, **Purchase analysis** from a vendor, **Actual vs budget**, **G/L by period** and **G/L activity detail** from a G/L account, **Cash position** from a bank account, **Projects** from a project and **Fixed assets** from a fixed asset. See [Open a workspace from a card or list](workspace-open-in-context.md).
+Some templates open from a card or a list, already filtered to that record: for example **Sales analysis** from a customer, **Purchase analysis** from a vendor, **Actual vs budget**, **G/L by period** and **G/L activity detail** from a G/L account, **Cash position** from a bank account, **Projects** from a project, **Fixed assets** from a fixed asset and **Service orders** from a customer. See [Open a workspace from a card or list](workspace-open-in-context.md).
 
 ## Adapt a template
 
