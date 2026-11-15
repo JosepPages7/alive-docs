@@ -5,7 +5,7 @@ description: The ready-made workspaces that ship with ALive Analysis, grouped by
 
 # Starter templates
 
-ALive Analysis includes 31 ready-made workspaces, called templates, that you can create in one step and then adapt.
+ALive Analysis includes 44 ready-made workspaces, called templates, that you can create in one step and then adapt.
 
 ## Create a workspace from a template
 
@@ -38,7 +38,7 @@ For a template that reads entries:
 - Run it for a short period. See [Ask for filters at run](workspace-run-options.md).
 - Or schedule it, so it runs in the background and opens at once with that data. You schedule a workspace on the **ALive Workspaces** page, and a scheduled run is personal. See [Schedule a workspace to run in the background](workspace-schedule.md).
 
-Seven templates read entries: **Receivables & payables aging**, **Cash flow forecast**, **G/L activity detail**, **Item sales by customer**, **Payment behaviour**, **Returns** and **System health**. The other 24 are fast.
+Twelve templates read entries: **Receivables & payables aging**, **Cash flow forecast**, **Customer and vendor ledger detail**, **Daily sales**, **G/L activity detail**, **Item sales by customer**, **Payment behaviour**, **Project usage and invoicing by type**, **Returns**, **Stock by lot and serial number**, **System health** and **Vendor delivery performance**. The other 32 are fast.
 
 ## The templates
 
@@ -51,6 +51,7 @@ Most templates ask for the period when they run and start from a default period,
 | **Actual vs budget** | Each income statement account's result month by month against its G/L budget: the variance and the share of the budget reached. Choose the budget in **Budget Filter** when you run it; left blank, every budget is added up. | Fast | This fiscal year |
 | **Cash flow forecast** | The cash expected in and out by due date: open customer and vendor entries and the outstanding amounts of open sales and purchase orders, next to the balance of the bank accounts. An overdue item stays in the month it fell due. | Reads entries | None |
 | **Cash position** | The bank accounts month by month: each account's balance at the end of every month, next to the month's movement. | Fast | Last 12 months |
+| **Customer and vendor ledger detail** | The customer and vendor ledger entries of the period, one by one: amount, remaining amount, document and due date, by customer or vendor and by document type. A vendor's invoices are negative, as in Business Central. | Reads entries | This month |
 | **Financial ratios** | Margins, returns and the balance sheet structure for the period against the same period a year earlier, from each G/L account's **Account Category**: tiles, trends by month, both statements and a [Sheet view](workspace-sheet-view.md) with every formula. The current and quick ratios aren't included, because they depend on how your chart of accounts is set up. | Fast | This fiscal year |
 | **Fixed assets** | Each fixed asset in its depreciation books: acquisition cost, accumulated depreciation and book value by class and by asset, and the acquisitions and depreciation month by month. An asset shows once for each depreciation book, so pick the book in the slicer. | Fast | Last 12 months |
 | **G/L activity detail** | The general ledger entries of the period, one by one: debit, credit and amount by account, document and source code. A second page shows each account's opening balance, movement and closing balance. A period that ends on a year's last day leaves out the year-end closing entries. | Reads entries | This month |
@@ -66,12 +67,16 @@ Most templates ask for the period when they run and start from a default period,
 
 | Template | What it shows | Mark | Default period |
 | --- | --- | --- | --- |
+| **Customer retention** | Each customer's sales in the period beside the same period a year earlier: the new, rising, falling and lost customers, and how much of last year's sales was kept. A change of more than 10 % counts as rising or falling. | Fast | Last 12 months |
 | **Customers by quintile** | The customers with sales in the period, ranked by their sales and split into five groups with the same number of customers: how much of the sales each fifth brings, the average sales per customer and the margin. | Fast | Last 12 months |
+| **Daily sales** | The sales day by day: sales, profit and number of invoices, beside the same day a month earlier. Run for the month to date, it compares this month so far with the same days of last month. | Reads entries | Month to date |
 | **Item sales & margin** | Sales, cost and margin by item and month, with the item category: sales against margin % for each item, the Pareto of sales, best sellers and the monthly pattern. | Fast | This fiscal year |
 | **Item sales by category** | A code dataset (script) with sales, cost and margin by item and month and the whole item category tree, at any depth: a drill from the top category down to the item. | Fast | This fiscal year |
 | **Item sales by customer** | What each customer bought of each item: quantity, sales, cost and margin by customer, item and month. | Reads entries | This fiscal year |
+| **Open orders and quotes** | The open sales and purchase quotes and orders with the document's own amount: by type, age, status, salesperson or purchaser, the largest customers and vendors, and the quotes that expired. Amounts in a foreign currency are converted with the document's exchange rate. | Fast | None |
 | **Returns** | What was returned and credited in the period: the items on posted sales and purchase credit memos, by customer or vendor, item, return reason and month. | Reads entries | Last 12 months |
 | **Sales analysis** | Sales and profit by customer and month: the last 12 months against the 12 before them, the growing and declining customers, top customers, countries and the monthly trend. | Fast | Last 24 months |
+| **Sales by salesperson** | Sales and profit by salesperson and month: the ranking of salespeople, their margin, the monthly trend and each one's customers. The salesperson is the one on the customer card today, not the one on each document. | Fast | Last 12 months |
 | **Sales pipeline** | The opportunities in progress in Relationship Management: the pipeline by sales cycle stage as a funnel, and the weighted value by salesperson and by expected closing month. | Fast | None |
 | **Sales scorecard** | The last fiscal year of the run month by month against the same month a year earlier, in a [Sheet view](workspace-sheet-view.md): sales, the change %, profit, margin % and sales year to date. | Fast | Last 2 fiscal years |
 
@@ -80,21 +85,34 @@ Most templates ask for the period when they run and start from a default period,
 | Template | What it shows | Mark | Default period |
 | --- | --- | --- | --- |
 | **Purchase analysis** | Purchases by vendor and month, with the discounts received: top vendors, countries, the monthly trend and today's open orders, plus purchases by item category and each item's average unit cost. | Fast | This fiscal year |
+| **Purchases by item and location** | What was bought of each item in each location month by month: amount, quantity and average unit cost by location, by category and by item. | Fast | Last 12 months |
 | **Rising and falling vendors** | Each vendor's purchases in the period beside the same period a year earlier: the change, the vendors rising and falling most, and the new and the lost ones. A change of more than 10 % counts as rising or falling. | Fast | Last 12 months |
+| **Vendor delivery performance** | The purchase receipt lines posted in the period against the date the vendor promised, or the expected receipt date when none was promised: the on-time %, the late lines and the days late, by vendor, by item and by month. It counts lines, not quantities. | Reads entries | Last 12 months |
 
 ### Inventory
 
 | Template | What it shows | Mark | Default period |
 | --- | --- | --- | --- |
+| **ABC analysis** | The items with sales in the period, ranked by sales and classed A, B and C: the few items that make 80 % of the sales, the next 15 % and the long tail of the last 5 %. | Fast | Last 12 months |
+| **Bin contents** | Every bin content of the warehouse with the quantity in it now: by location, zone, bin and item, with the empty bins and the ones below their minimum or above their maximum. Empty when no location uses bins. | Fast | None |
 | **Inventory by location** | Each item's stock in each location: the quantity on hand and its value at unit cost by location and by category, the items worth most, and the net change month by month. | Fast | Last 12 months |
+| **Slow-moving stock** | Each item's stock on hand today beside what it sold in the period: the stock with no sale at all, the stock beyond what the whole period sold, and their value, by item and by category. | Fast | Last 12 months |
+| **Stock by lot and serial number** | What is on hand of each lot and each serial number today: remaining quantity and value by item, location and expiration date, with what has expired and what expires soon. Empty when item tracking is not used. | Reads entries | None |
 | **Supply and demand** | Each inventory item's demand against its supply month by month, and what is available after them, with the open sales and purchase order lines behind the figures on a second page. | Fast | This fiscal year |
 
-### Production & projects
+### Production
 
 | Template | What it shows | Mark | Default period |
 | --- | --- | --- | --- |
 | **Production orders** | The open production orders (planned, firm planned and released): remaining quantity, expected cost and progress by status and due date, the components still to consume, and the load of the work centers against their capacity. | Fast | This year |
-| **Projects** | Each project and its tasks: budget cost against actual cost, billable against invoiced and what is left to invoice, and the actual cost and invoicing month by month. | Fast | Last 12 months |
+| **Work center and machine center load** | Each work center and machine center month by month: the effective capacity of its shop calendar against the time the production orders need, with the load % and the free capacity. A work center's need includes its machine centers', so the two are on separate pages. | Fast | This fiscal year |
+
+### Projects
+
+| Template | What it shows | Mark | Default period |
+| --- | --- | --- | --- |
+| **Projects** | Each project and its tasks: budget cost against actual cost, billable against invoiced, what is left to invoice and how much of the usage was invoiced (realization %), by project and by customer, and the actual cost and invoicing month by month. | Fast | Last 12 months |
+| **Project usage and invoicing by type** | What the projects used and what was invoiced in the period, by type (resources, items and G/L accounts): quantity, cost and amount by resource or item, by project and by month. | Reads entries | Last 12 months |
 
 ### Service
 
@@ -121,7 +139,7 @@ Most templates include a **How to read** panel that explains their figures, for 
 
 ## Open a template's workspace from a record
 
-Some templates open from a card or a list, already filtered to that record: for example **Sales analysis** from a customer, **Purchase analysis** from a vendor, **Actual vs budget**, **G/L by period** and **G/L activity detail** from a G/L account, **Cash position** from a bank account, **Projects** from a project, **Fixed assets** from a fixed asset and **Service orders** and **Service contracts and items** from a customer. See [Open a workspace from a card or list](workspace-open-in-context.md).
+Some templates open from a card or a list, already filtered to that record: for example **Sales analysis** from a customer, **Purchase analysis** from a vendor, **Actual vs budget**, **G/L by period** and **G/L activity detail** from a G/L account, **Cash position** from a bank account, **Projects** and **Project usage and invoicing by type** from a project, **Sales by salesperson** from a salesperson, **Open orders and quotes** from a customer or a vendor, **Fixed assets** from a fixed asset and **Service orders** and **Service contracts and items** from a customer. See [Open a workspace from a card or list](workspace-open-in-context.md).
 
 ## Adapt a template
 
