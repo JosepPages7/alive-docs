@@ -23,7 +23,7 @@ The kind of a dataset can't be changed after you add it. To use another source, 
 
 ## Edit a dataset's source
 
-Choose the pencil on the dataset, or double-click it. Depending on the kind, the pencil is **Edit the query…**, **Edit the code…**, **Report options…**, **Financial report options…** or **Pick the datasets…**.
+Choose the pencil on the dataset, or double-click it. Depending on the kind, the pencil is **Edit the query…**, **Edit the code…**, **Report options…**, **Financial report options…** or **Pick the datasets…**. On a dataset that takes an output of another dataset's script, the pencil is **Edit the script of "\<name\>"…** and opens that script.
 
 When a source change brings new fields, the Studio offers to add them to the layout: choose **Add columns** or **Not now**. Columns you removed earlier aren't offered again.
 
@@ -33,7 +33,7 @@ Open the dataset's **⋯** menu (Dataset actions), or right-click the dataset:
 
 | Action | What it does |
 | --- | --- |
-| **Add a dataset from an output…** | Code datasets only. Adds a dataset that shows another output of the same script. |
+| **Add a dataset from an output…** | Code datasets only. Adds a dataset that shows another output of the same script. See [Several datasets from one script](workspace-script-dataset.md#several-datasets-from-one-script). |
 | **Rename…** | Renames the dataset. Dataset names must be unique in the workspace. |
 | **Settings…** | Opens the dataset settings described below. |
 | **Move up** / **Move down** | Changes the order of the datasets. |
@@ -44,7 +44,7 @@ Open the dataset's **⋯** menu (Dataset actions), or right-click the dataset:
 | Setting | What it does |
 | --- | --- |
 | **Ask for the report options at run** | Report datasets. Shows the report's request page when a user runs the workspace, filled in with their last options. Off means the options set in the Studio always apply. |
-| **Output** | Code datasets. The script output this dataset shows. Blank means the rows the script adds before it chooses any output. |
+| **Output** | Code datasets. The script output this dataset shows. Pick it in the list of the names the script passes to `Dataset.SetOutput`. **(default)** means the rows the script adds before it chooses any output. |
 | **Let users add calculated columns** | Lets users of the viewer add their own calculated columns to the views of this dataset. |
 | **Rows in the first message** | How many rows reach the viewer in the first batch. Each next batch doubles, up to 20,000 rows. |
 | **Rows read to discover the columns** | Query and code datasets. How many rows the Studio reads when it discovers the dataset's columns. |

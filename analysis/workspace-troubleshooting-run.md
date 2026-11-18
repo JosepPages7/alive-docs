@@ -33,6 +33,10 @@ The source no longer has a column the layout uses. In the Studio, delete the lay
 
 The code dataset whose script fed this dataset was deleted. Delete this dataset, or add it again from another code dataset's **⋯** menu with **Add a dataset from an output…**.
 
+### The script of the dataset "\<name\>" has no output "\<output\>": call Dataset.SetOutput('\<output\>') before its columns and rows.
+
+The dataset takes an output that the script didn't write in this run, for example because the name is spelled differently or the code that calls `Dataset.SetOutput` didn't run. Correct the name in the script, or pick another output in **Output** in the dataset's **Settings…**. See [Several datasets from one script](workspace-script-dataset.md#several-datasets-from-one-script).
+
 ### Its datasets have not run.
 
 An append dataset shows this when none of the datasets it appends has rows: they failed or the run was cancelled. Fix the error of those datasets, and then choose **Refresh**. See [Append datasets](workspace-append-dataset.md).
