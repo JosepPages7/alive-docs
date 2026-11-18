@@ -47,12 +47,64 @@ When the run dialog asks for a **Period**, it reaches the request page fields bo
 
 ## Several datasets from one script
 
-One script can feed several datasets, for example a summary and its details:
+One script can feed several datasets, for example a summary and the details behind it. Each dataset has its own columns, layout and views, but the data is read in one pass and the user answers one request page.
 
-1. In the script, call `Dataset.SetOutput('Monthly')` before the columns and rows of that output.
-2. In the dataset's **⋯** menu, choose **Add a dataset from an output…** and enter the output name.
+### Write the outputs
 
-The script runs once per run and feeds every dataset that takes one of its outputs. They share one request page.
+Everything the script adds before its first `Dataset.SetOutput` goes to the default output. `Dataset.SetOutput(Name)` starts another output: the columns and rows that follow belong to it. This script sends one row per customer to the default output and the open entries behind each balance to the output `OpenEntries`:
+
+```al
+var
+    Customer: Record Customer;
+    Entry: Record "Cust. Ledger Entry";
+begin
+    // the default output: one row per customer
+    Dataset.AddColumn('No', 'No.', 'Text');
+    Dataset.AddColumn('Name', 'Name', 'Text');
+    Dataset.AddColumn('Balance', 'Balance (LCY)', 'Number', 'sum');
+    Customer.SetAutoCalcFields("Balance (LCY)");
+    if Customer.FindSet() then
+        repeat
+            Dataset.AddRow(Customer."No.", Customer.Name, Customer."Balance (LCY)");
+        until Customer.Next() = 0;
+
+    // the output "OpenEntries": the open entries behind those balances
+    Dataset.SetOutput('OpenEntries');
+    Dataset.AddColumn('Customer', 'Customer No.', 'Text');
+    Dataset.AddColumn('PostingDate', 'Posting Date', 'Date');
+    Dataset.AddColumn('DocumentNo', 'Document No.', 'Text');
+    Dataset.AddColumn('Remaining', 'Remaining Amt. (LCY)', 'Number', 'sum');
+    Entry.SetRange(Open, true);
+    Entry.SetAutoCalcFields("Remaining Amt. (LCY)");
+    if Entry.FindSet() then
+        repeat
+            Dataset.AddRow(Entry."Customer No.", Entry."Posting Date", Entry."Document No.", Entry."Remaining Amt. (LCY)");
+        until Entry.Next() = 0;
+end;
+```
+
+The same script is in the code editor under **Samples** > **Several datasets from one script (Dataset.SetOutput)**.
+
+An output name has letters, digits and underscores and doesn't start with a digit. Names are compared without regard to case. `Dataset.SetOutput('')` goes back to the default output, and switching back to an output continues where it stopped.
+
+### Add a dataset for each output
+
+1. Add the code dataset and write the script. This dataset shows the default output.
+2. In its **⋯** menu, choose **Add a dataset from an output…**.
+3. Pick the output in the list and choose **Add**. The list shows the names the script passes to `Dataset.SetOutput`, the ones no dataset shows yet first. When the script passes the name in a variable, type the name instead.
+
+The new dataset is named after the output and shows a link icon. A second line under its name says which output it takes, for example **↳ output "OpenEntries" of Customers**. To show another output in an existing dataset, change **Output** in its **Settings…**.
+
+### How the datasets work together
+
+- **One script.** A dataset that takes an output has no script of its own. Its pencil, **Edit the script of "\<name\>"…**, opens the script of the dataset that owns it.
+- **One run.** The script runs once per run, or per **Refresh**, and feeds every dataset that takes one of its outputs. A script error fails all of them.
+- **One request page.** The datasets share the request page and the saved answers.
+- **Deleting.** Deleting the script's dataset also deletes the datasets that take its outputs. The confirmation names them.
+- **Max rows.** The **Max rows** of the script's dataset caps every output. An output that reaches it keeps its first rows, and the other outputs aren't cut.
+- **Discovering the columns.** When the Studio discovers the columns of one output, the script still runs through the outputs before it. Use `Dataset.IsPreview()` to skip slow work while it does.
+
+If the script doesn't write an output a dataset takes, the run fails. See [Troubleshoot running workspaces](workspace-troubleshooting-run.md).
 
 ## With the ALive AI app
 
