@@ -13,7 +13,7 @@ For messages while a workspace runs, see [Troubleshoot running workspaces](works
 
 ### You do not have permission to use workspace "\<name\>". Contact an administrator to be added to one of its permission sets.
 
-The workspace isn't shared with any permission set you have. An administrator adds one of your permission sets on the workspace's **Permissions…** page, or assigns you a permission set already listed there. See [Who can see and run workspaces](workspace-permissions.md).
+The workspace isn't shared with any permission set you have. An administrator adds one of your permission sets on the workspace's **Permissions…** page, or assigns you a permission set already listed there. A listed set must be assigned to you or to your security group; a set that is only included in another permission set doesn't count. See [Who can see and run workspaces](workspace-permissions.md).
 
 ### Only workspace administrators can do this (write permission on the workspace table is required).
 
