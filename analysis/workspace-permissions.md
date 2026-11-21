@@ -26,6 +26,8 @@ Both permission sets include what ALive Analysis itself needs to run all four ki
 
 A workspace is shared with permission sets, not with individual users. A user can run it when they have the **ALive Workspaces User** permission set and at least one of the permission sets listed for the workspace. The user can hold that permission set directly or through a security group, in the current company or in all companies.
 
+A permission set counts only when it is assigned to the user or to their security group. A set that is only included in another permission set doesn't count: list the set that is assigned to the users. The same applies to the **ALive Workspaces Scheduler** and **ALive Workspaces Suggest Views** permission sets: assign them directly or through a security group.
+
 1. In the **ALive Workspace Studio**, open the workspace menu (**…**) of the workspace, or right-click any workspace, and choose **Permissions…**.
 2. On the **Workspace Permissions** page, add a line and choose the permission set in **Permission Set**. Use the lookup to pick the exact set when several have the same name.
 3. Close the page. The change applies the next time users open or run the workspace.

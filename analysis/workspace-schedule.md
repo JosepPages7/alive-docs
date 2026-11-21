@@ -79,7 +79,7 @@ A failed run keeps the previous result. Open the job queue entry on the **Job Qu
 
 ### You do not have permission to schedule workspace runs. Ask your administrator for the "ALV WS SCHEDULER" permission set.
 
-You don't have the **ALive Workspaces Scheduler** permission set, or it was removed after you scheduled the workspace. Ask your administrator to assign it.
+You don't have the **ALive Workspaces Scheduler** permission set, or it was removed after you scheduled the workspace. Ask your administrator to assign it to you or to your security group; including it in another permission set isn't enough.
 
 ### You do not have permission to run the workspace "\<name\>".
 
