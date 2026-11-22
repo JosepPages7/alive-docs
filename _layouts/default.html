@@ -12,7 +12,7 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       {% if site.title and site.title != page.title %}
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
+      <h1><a href="{{ "/help/" | absolute_url }}">{{ site.title }}</a></h1>
       {% endif %}
 
       {% comment %} Breadcrumb back to the product's index (primer's default layout + this block) {% endcomment %}
@@ -21,7 +21,7 @@
       {% for entry in products %}
         {% assign pair = entry | split: ":" %}
         {% if pair[0] == product_dir and page.name != "index.md" %}
-      <nav aria-label="Breadcrumb"><p><a href="{{ "/" | relative_url }}">Home</a> &rsaquo; <a href="{{ page.dir | relative_url }}">{{ pair[1] }}</a></p></nav>
+      <nav aria-label="Breadcrumb"><p><a href="{{ "/help/" | relative_url }}">Home</a> &rsaquo; <a href="{{ page.dir | relative_url }}">{{ pair[1] }}</a></p></nav>
         {% endif %}
       {% endfor %}
 

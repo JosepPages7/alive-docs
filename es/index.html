@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="text-scale" content="scale">
+<title>ALive Analysis: tablas dinámicas, gráficos y KPI dentro de Business Central</title>
+<meta name="description" content="Analice sus datos de Business Central donde viven: tablas dinámicas, gráficos, KPI y hojas de cálculo en una página dentro de Business Central, con 46 plantillas listas, sus permisos de BC y sin copiar nada fuera.">
+<link rel="canonical" href="https://joseppages7.github.io/alive-docs/es/">
+<link rel="alternate" hreflang="en" href="https://joseppages7.github.io/alive-docs/">
+<link rel="alternate" hreflang="es" href="https://joseppages7.github.io/alive-docs/es/">
+<link rel="alternate" hreflang="x-default" href="https://joseppages7.github.io/alive-docs/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ALive Analysis: tablas dinámicas, gráficos y KPI dentro de Business Central">
+<meta property="og:description" content="Analice sus datos de Business Central donde viven: tablas dinámicas, gráficos, KPI y hojas de cálculo en una página dentro de Business Central, con 46 plantillas listas, sus permisos de BC y sin copiar nada fuera.">
+<meta property="og:url" content="https://joseppages7.github.io/alive-docs/es/">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1' y='1' width='24' height='24' rx='6' fill='%230e7c86'/%3E%3Crect x='6' y='14' width='3.4' height='6' rx='1' fill='%23fff'/%3E%3Crect x='11.3' y='10' width='3.4' height='10' rx='1' fill='%23fff'/%3E%3Crect x='16.6' y='6' width='3.4' height='14' rx='1' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+/* ALive Analysis landing page. Style A (the product's light teal look, ui-shared/alive-ui.css of BC-ALive) + one dark band for the Pain.
+   Single light look on purpose: it mirrors the product, which has no dark mode for this page's readers. */
+:root {
+  --bg: #fbfdfe; --fg: #252423; --dim: #5f7275; --band: #eff7f8; --line: #d3e5e8; --card: #ffffff;
+  --accent: #0e7c86; --accent-dk: #0a5d65; --ink: #0d3438; --ink-dim: #9cc4c8; --ok: #107c10; --strike: #e3797f;
+  --font: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 1rem/1.55 var(--font); }
+img { max-width: 100%; height: auto; display: block; }
+.inner { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ico { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+h1, h2, h3 { text-wrap: balance; }
+[id] { scroll-margin-top: 6rem; } /* covers the top bar when its links wrap to a second row */
+.skip { position: absolute; left: 16px; top: -100px; z-index: 10; padding: 10px 16px; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 600; }
+.skip:focus { top: 8px; }
+.vh { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+nav.top { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 5; padding-top: env(safe-area-inset-top, 0px); }
+nav.top .inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; padding-block: 14px; }
+.mark { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.0625rem; color: var(--accent); white-space: nowrap; text-decoration: none; }
+.mark svg { width: 26px; height: 26px; }
+nav.top .links { display: flex; gap: 20px; font-size: 0.875rem; }
+nav.top .links a { color: var(--fg); text-decoration: none; opacity: .8; }
+nav.top .links a:hover { color: var(--accent); opacity: 1; }
+.lang { margin-left: auto; font-size: 0.8125rem; color: var(--dim); white-space: nowrap; }
+.lang a { color: var(--dim); }
+.lang b { color: var(--fg); font-weight: 600; }
+
+.eyebrow { font-size: 0.8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+.badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8125rem; padding: 8px 12px; border-radius: 6px; border: 1px dashed var(--dim); color: var(--dim); }
+.badge .ico { width: 16px; height: 16px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; font-size: 0.9375rem; padding: 11px 18px; border-radius: 6px; background: var(--accent); color: #fff; }
+.btn:hover { background: var(--accent-dk); }
+
+.hero .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 48px; align-items: center; padding-block: 56px 64px; }
+h1 { font-size: clamp(2rem, 1.2rem + 2.4vw, 3rem); line-height: 1.1; margin: 0 0 18px; font-weight: 600; letter-spacing: -.015em; }
+.lead { font-size: 1.125rem; color: var(--dim); margin: 0 0 26px; max-width: 52ch; }
+.ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.free { font-size: 0.875rem; color: var(--dim); margin: 16px 0 0; display: flex; gap: 6px; align-items: center; }
+.free .ico { width: 18px; height: 18px; color: var(--ok); }
+
+/* the one bold moment of the page */
+.pain { background: var(--ink); color: #fff; }
+.pain .inner { padding-block: 56px; display: grid; gap: 32px; }
+.pain .quote { font-size: clamp(1.375rem, 1rem + 1.2vw, 1.875rem); font-weight: 600; line-height: 1.25; margin: 0; max-width: 34ch; text-wrap: balance; }
+.pain .quote span { color: var(--ink-dim); }
+.pain ul { list-style: none; margin: 0; padding: 28px 0 0; border-top: 1px solid rgba(255,255,255,.18); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.pain li strong { display: block; font-size: 1.1875rem; font-weight: 600; margin-bottom: 6px; }
+.pain li strong s { text-decoration-color: var(--strike); text-decoration-thickness: 2px; color: var(--ink-dim); font-weight: 400; margin-right: 4px; }
+.pain li p { margin: 0; color: var(--ink-dim); font-size: 0.9375rem; }
+
+.block .inner { padding-block: 64px; }
+h2 { font-size: clamp(1.625rem, 1.2rem + 1vw, 2rem); font-weight: 600; margin: 0 0 8px; line-height: 1.2; }
+.sub { color: var(--dim); margin: 0 0 32px; max-width: 62ch; }
+.alt { background: var(--band); border-block: 1px solid var(--line); }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 48px; align-items: center; }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; counter-reset: step; }
+.steps li { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; }
+.steps li::before { counter-increment: step; content: counter(step); grid-row: span 2; width: 32px; height: 32px; border-radius: 50%; background: var(--band); border: 1px solid var(--line); color: var(--accent); font-weight: 700; display: grid; place-items: center; }
+.steps h3 { margin: 4px 0 4px; font-size: 1.0625rem; font-weight: 600; }
+.steps p { margin: 0; color: var(--dim); font-size: 0.9375rem; }
+
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 22px; }
+.card .ico { color: var(--accent); }
+.card h3 { margin: 10px 0 6px; font-size: 1.0625rem; font-weight: 600; }
+.card p { margin: 0; color: var(--dim); font-size: 0.9375rem; }
+
+.cats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; margin-top: 40px; }
+.cat h3 { font-size: 0.75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; font-weight: 600; }
+.cat ul { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 6px; font-size: 0.875rem; }
+
+.cards.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.more { margin: 20px 0 0; font-weight: 600; }
+#roles h2 { margin-bottom: 16px; }
+
+/* template gallery */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 40px; }
+.thumb a { display: block; border-radius: 6px; }
+.thumb a:hover img { box-shadow: 0 12px 36px rgba(13,52,56,.28); }
+.thumb .shot-ph { font-size: 0.8125rem; }
+
+/* the second dark band: what happens to the data */
+.security { background: var(--ink); color: #fff; }
+.security .inner { padding-block: 64px; }
+.security .ico.big { width: 36px; height: 36px; color: var(--ink-dim); margin-bottom: 12px; }
+.security .sub { color: var(--ink-dim); }
+.security .checks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 40px; }
+.security .checks .ico { color: var(--ink-dim); }
+.security a { color: #fff; }
+.security a:focus-visible { outline-color: #fff; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.checks li { display: flex; gap: 10px; align-items: flex-start; }
+.checks .ico { width: 18px; height: 18px; color: var(--ok); margin-top: 4px; }
+
+
+.prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.price { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.price.main { border: 2px solid var(--accent); }
+.price h3 { margin: 0; font-size: 1.125rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.price h3 em { font-style: normal; font-size: 0.75rem; font-weight: 600; color: #fff; background: var(--accent); padding: 2px 10px; border-radius: 999px; }
+.amount { font-size: 2.375rem; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.amount small { font-size: 0.875rem; font-weight: 400; color: var(--dim); }
+.price .checks { font-size: 0.9375rem; gap: 8px; }
+.price-note { font-size: 0.8125rem; color: var(--dim); margin: 18px 0 0; }
+
+footer { border-top: 1px solid var(--line); }
+footer .inner { padding-block: 28px calc(28px + env(safe-area-inset-bottom, 0px)); display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 0.8125rem; color: var(--dim); }
+footer a { color: var(--dim); }
+footer small { flex-basis: 100%; font-size: 0.75rem; }
+
+/* clips */
+.videos { display: grid; gap: 40px; margin-bottom: 40px; }
+.vid { width: 100%; max-width: 960px; margin-inline: auto; }
+.vid video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--ink); border: 1px solid #c8c8c8; border-radius: 6px; box-shadow: 0 12px 36px rgba(13,52,56,.14); }
+
+/* screenshots */
+.shot-fig { margin: 0; min-width: 0; }
+.shot-fig img { border: 1px solid #c8c8c8; border-radius: 6px; box-shadow: 0 12px 36px rgba(13,52,56,.14); }
+.shot-fig figcaption { font-size: 0.8125rem; color: var(--dim); text-align: center; margin-top: 10px; }
+.shot-ph { aspect-ratio: 16 / 9; max-width: 100%; border: 2px dashed var(--line); border-radius: 6px; background: var(--band); display: grid; place-items: center; color: var(--dim); font-size: 0.875rem; }
+.alt .shot-ph { background: var(--card); }
+
+@media (max-width: 60em) { .cats { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 53.75em) {
+  .hero .inner, .split, .pain ul, .steps, .cards, .cards.four, .security .checks, .prices { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  nav.top .links { display: none; }
+  .hero .inner { padding-block: 36px 44px; gap: 32px; }
+  .block .inner { padding-block: 48px; }
+}
+@media (max-width: 30em) { .cats { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 26 26"><rect x="1" y="1" width="24" height="24" rx="6" fill="currentColor"/><rect x="6" y="14" width="3.4" height="6" rx="1" fill="#fff"/><rect x="11.3" y="10" width="3.4" height="10" rx="1" fill="#fff"/><rect x="16.6" y="6" width="3.4" height="14" rx="1" fill="#fff"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 8h16l-1 12H5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-drill" viewBox="0 0 24 24"><path d="M4 6h10M4 12h7M4 18h5"/><path d="M14 13l6 6M20 14v5h-5"/></symbol>
+  <symbol id="i-open" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 13.5h4M8 16h7"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#content">Saltar al contenido</a>
+<nav class="top"><div class="inner">
+  <a class="mark" href="../"><svg aria-hidden="true"><use href="#mark"/></svg>ALive Analysis</a>
+  <span class="links"><a href="#how">Cómo funciona</a><a href="#features">Funcionalidades</a><a href="#templates">Plantillas</a><a href="#security">Seguridad</a><a href="#prices">Precios</a><a href="../analysis/">Documentación (en inglés)</a></span>
+  <span class="lang"><a href="../" hreflang="en" lang="en">English</a> · <b>Español</b></span>
+</div></nav>
+
+<main id="content">
+<header class="hero"><div class="inner">
+  <div>
+    <p class="eyebrow">Para Microsoft Dynamics 365 Business Central</p>
+    <h1>Sus datos de BC, analizados donde viven.</h1>
+    <p class="lead">Tablas dinámicas, gráficos, KPI y hojas de cálculo en una página dentro de Business Central: nada que instalar fuera de él, nada que copiar fuera y ningún segundo modelo de seguridad.</p>
+    <div class="ctas">
+      <a class="btn" href="../analysis/">Leer la documentación (en inglés)</a>
+      <span class="badge"><svg class="ico" aria-hidden="true"><use href="#i-store"/></svg>Próximamente en Microsoft AppSource</span>
+    </div>
+    <p class="free"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Plan gratuito: todas las plantillas, para todos los usuarios.</p>
+  </div>
+  <figure class="shot-fig"><!-- shortcut: a drawn stand-in for the CEO dashboard screenshot (illustrative figures); removed once assets/landing/ceo-dashboard-1600.webp exists -->
+<style>.mock{container-type:inline-size;background:#fff;color:#212121;font:12px/1.4 "Segoe UI",-apple-system,Arial,sans-serif;border:1px solid #c8c8c8;border-radius:6px;overflow:hidden;box-shadow:0 12px 36px rgba(13,52,56,.14)}.mock-top{background:#00706b;color:#fff;padding:7px 12px;display:flex;gap:10px;font-weight:600}.mock-top span{margin-left:auto;font-weight:400;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mock-title{padding:10px 14px 6px;font-size:16px;font-weight:600}.mock-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:4px 14px 10px}.mock-kpis div,.mock-panel{border:1px solid #e1e1e1;border-radius:4px;padding:8px 10px;min-width:0}.mock-kpis b{display:block;font-size:18px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}.mock-kpis small{color:#616161;display:block}.mock-kpis .up{color:#107c10}.mock-kpis .warn{color:#a4262c}.mock-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:8px;padding:0 14px 14px}.mock-panel h4{margin:0 0 4px;font-size:12px}.mock-panel svg{display:block;width:100%;height:auto}.mock-panel svg text{fill:#616161;font-size:9px}.mock-panel table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}.mock-panel td{padding:4px 0;border-top:1px solid #efefef;white-space:nowrap}.mock-panel td:last-child{text-align:right}@container (max-width:560px){.mock-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.mock-body{grid-template-columns:1fr}}</style>
+<div class="mock" role="img" aria-label="Placeholder: CEO dashboard"><div class="mock-top">Dynamics 365 Business Central<span>CRONUS USA, Inc.</span></div><div class="mock-title">CEO dashboard</div>
+<div class="mock-kpis"><div><small>Sales this year</small><b>$1,284,560</b><small class="up">+8.4% vs last year</small></div><div><small>Gross margin</small><b>31.2%</b><small class="up">+1.1 pts</small></div><div><small>Overdue receivables</small><b>$96,410</b><small class="warn">14 customers</small></div><div><small>Cash position</small><b>$412,880</b><small>4 bank accounts</small></div></div>
+<div class="mock-body"><div class="mock-panel"><h4>Sales by month</h4><svg viewBox="0 0 480 150" aria-hidden="true"><line x1="32" x2="476" y1="125" y2="125" stroke="#ececec"/><text x="27" y="128" text-anchor="end">0</text><line x1="32" x2="476" y1="83.9" y2="83.9" stroke="#ececec"/><text x="27" y="86.9" text-anchor="end">50k</text><line x1="32" x2="476" y1="42.9" y2="42.9" stroke="#ececec"/><text x="27" y="45.9" text-anchor="end">100k</text><rect x="38" y="60.9" width="12" height="64.1" fill="#9bc9cc"/><rect x="51" y="57.6" width="12" height="67.4" fill="#00706b"/><text x="50.5" y="142" text-anchor="middle">J</text><rect x="75" y="56" width="12" height="69" fill="#9bc9cc"/><rect x="88" y="50.3" width="12" height="74.7" fill="#00706b"/><text x="87.5" y="142" text-anchor="middle">F</text><rect x="112" y="47" width="12" height="78" fill="#9bc9cc"/><rect x="125" y="39.6" width="12" height="85.4" fill="#00706b"/><text x="124.5" y="142" text-anchor="middle">M</text><rect x="149" y="49.4" width="12" height="75.6" fill="#9bc9cc"/><rect x="162" y="44.5" width="12" height="80.5" fill="#00706b"/><text x="161.5" y="142" text-anchor="middle">A</text><rect x="186" y="42" width="12" height="83" fill="#9bc9cc"/><rect x="199" y="33" width="12" height="92" fill="#00706b"/><text x="198.5" y="142" text-anchor="middle">M</text><rect x="223" y="36.3" width="12" height="88.7" fill="#9bc9cc"/><rect x="236" y="26.4" width="12" height="98.6" fill="#00706b"/><text x="235.5" y="142" text-anchor="middle">J</text><rect x="260" y="51.1" width="12" height="73.9" fill="#9bc9cc"/><rect x="273" y="46.1" width="12" height="78.9" fill="#00706b"/><text x="272.5" y="142" text-anchor="middle">J</text><rect x="297" y="56" width="12" height="69" fill="#9bc9cc"/><rect x="310" y="52.7" width="12" height="72.3" fill="#00706b"/><text x="309.5" y="142" text-anchor="middle">A</text><rect x="334" y="37.9" width="12" height="87.1" fill="#9bc9cc"/><rect x="347" y="28.1" width="12" height="96.9" fill="#00706b"/><text x="346.5" y="142" text-anchor="middle">S</text><rect x="371" y="28.9" width="12" height="96.1" fill="#9bc9cc"/><rect x="384" y="21.5" width="12" height="103.5" fill="#00706b"/><text x="383.5" y="142" text-anchor="middle">O</text><rect x="408" y="25.6" width="12" height="99.4" fill="#9bc9cc"/><rect x="421" y="17.4" width="12" height="107.6" fill="#00706b"/><text x="420.5" y="142" text-anchor="middle">N</text><rect x="445" y="35.5" width="12" height="89.5" fill="#9bc9cc"/><rect x="458" y="28.1" width="12" height="96.9" fill="#00706b"/><text x="457.5" y="142" text-anchor="middle">D</text></svg></div><div class="mock-panel"><h4>Top customers</h4><table><tr><td>Adatum Corporation</td><td>$214,300</td></tr><tr><td>Trey Research</td><td>$186,950</td></tr><tr><td>Alpine Ski House</td><td>$142,780</td></tr><tr><td>Relecloud</td><td>$121,400</td></tr><tr><td>School of Fine Art</td><td>$98,640</td></tr></table></div></div></div><figcaption>La plantilla Panel de dirección, ejecutándose en la empresa de demostración CRONUS.</figcaption></figure>
+</div></header>
+
+<section class="pain" aria-label="¿Le resulta familiar?"><div class="inner">
+  <p class="quote">Sus cifras viven en Business Central. <span>Su análisis vive en la exportación a Excel de ayer.</span></p>
+  <ul>
+    <li><strong><s><span class="vh">Antes: </span>Exportar, pegar, actualizar</s> <span class="vh">Ahora: </span>Cifras en vivo</strong><p>Cada ejecución lee los movimientos registrados hoy. Nada que actualizar, nada que pegar.</p></li>
+    <li><strong><s><span class="vh">Antes: </span>Una segunda plataforma</s> <span class="vh">Ahora: </span>Una sola extensión</strong><p>Sin gateway, sin almacén de datos y sin un portal ni un inicio de sesión aparte que mantener.</p></li>
+    <li><strong><s><span class="vh">Antes: </span>Un segundo modelo de seguridad</s> <span class="vh">Ahora: </span>Sus permisos de BC</strong><p>Cada usuario ve lo que Business Central le permite ver, y nada más.</p></li>
+  </ul>
+</div></section>
+
+<section class="block" id="how"><div class="inner">
+  <h2>Tres pasos hasta su primer Workspace</h2>
+  <p class="sub">Lo configura un administrador de Business Central. No hay que instalar ninguna plataforma aparte.</p>
+  <ol class="steps">
+    <li><h3>Instale la extensión</h3><p>Desde Microsoft AppSource, como cualquier otra aplicación de Business Central.</p></li>
+    <li><h3>Elija una plantilla</h3><p>Empiece con una de las 46 plantillas o diseñe la suya en el ALive Workspace Studio.</p></li>
+    <li><h3>Compártalo con su equipo</h3><p>Asigne cada Workspace a los conjuntos de permisos que deben verlo.</p></li>
+  </ol>
+</div></section>
+
+<section class="block alt" id="features"><div class="inner">
+  <h2>Habla el idioma de Business Central</h2>
+  <p class="sub">Hecho para los datos de Business Central: lo que ve coincide con lo que BC registra e imprime.</p>
+  <div class="videos">
+    <figure class="shot-fig vid"><div class="shot-ph" role="img" aria-label="Haga clic en un valor: todos los gráficos, el mapa de árbol y la tabla dinámica lo siguen.">Vídeo pendiente</div><figcaption>Haga clic en un valor: todos los gráficos, el mapa de árbol y la tabla dinámica lo siguen.</figcaption></figure>
+    <figure class="shot-fig vid"><div class="shot-ph" role="img" aria-label="De una cifra de una tabla dinámica a las filas que hay detrás, y de ahí al registro de Business Central.">Vídeo pendiente</div><figcaption>De una cifra de una tabla dinámica a las filas que hay detrás, y de ahí al registro de Business Central.</figcaption></figure>
+    <figure class="shot-fig vid"><div class="shot-ph" role="img" aria-label="Un Workspace abierto desde la ficha de un cliente, ya filtrado por ese cliente.">Vídeo pendiente</div><figcaption>Un Workspace abierto desde la ficha de un cliente, ya filtrado por ese cliente.</figcaption></figure>
+  </div>
+  <div class="cards four">
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-drill"/></svg><h3>Desglose hasta el registro</h3><p>De cualquier cifra a la página y los registros de Business Central que hay detrás.</p></div>
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-open"/></svg><h3>Abrir en contexto</h3><p>Abra un Workspace desde la ficha de un cliente, un proveedor, un producto o una cuenta, ya filtrado por ese registro.</p></div>
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><h3>Sus informes como origen</h3><p>Consultas visuales sobre las tablas de BC, sus informes de BC e informes financieros calculados por el propio motor de BC.</p></div>
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-grid"/></svg><h3>Lo que espera un usuario de BI</h3><p>Tablas dinámicas, gráficos, mosaicos de KPI con objetivos, segmentaciones, una Sheet con fórmulas y exportación a Excel y CSV.</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="sheet"><div class="inner split">
+  <div>
+    <h2>Una hoja de cálculo dentro del Workspace</h2>
+    <p class="sub">La vista Sheet pone hojas de fórmulas junto a las tablas dinámicas y los gráficos, con los datos en vivo del Workspace.</p>
+    <ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Las fórmulas leen directamente cada Dataset del Workspace: DATASET.SUM, DATASET.LOOKUP, DATASET.ROWS y más.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nada que pegar ni actualizar: cada ejecución llena las fórmulas con las cifras de hoy.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>La edición, los formatos de número y las fórmulas de una hoja de cálculo, dentro de Business Central.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Tres plantillas ya incluyen una, con el plan gratuito: Ratios financieros, Cuadro de mando de ventas y Fondo de maniobra.</span></li></ul>
+    <p class="more"><a href="../analysis/workspace-sheet-view.html">Cómo funciona la vista Sheet (en inglés)</a></p>
+  </div>
+  <figure class="shot-fig"><div class="shot-ph" role="img" aria-label="Una vista Sheet: fórmulas sobre los Datasets del Workspace.">Captura pendiente</div><figcaption>Una vista Sheet: fórmulas sobre los Datasets del Workspace.</figcaption></figure>
+</div></section>
+
+<section class="block alt" id="extensions"><div class="inner split">
+  <div>
+    <p class="eyebrow">Pro</p>
+    <h2>También las tablas y los campos de sus extensiones</h2>
+    <p class="sub">La mayoría de las empresas usan Business Central con aplicaciones y personalizaciones. ALive Analysis ve sus tablas y campos igual que los estándar.</p>
+    <ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Las tablas y los campos que añaden otras extensiones, de AppSource o propias, aparecen en el ALive Query Designer junto a los estándar.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Combínelos, fíltrelos y totalícelos como cualquier otra tabla.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Las tablas y los campos que una extensión marca como internos nunca se ofrecen: la extensión mantiene su propia decisión de privacidad.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Diseñe y previsualice esas consultas con el plan gratuito; ejecute sus propios Workspaces con ellas con Pro.</span></li></ul>
+  </div>
+  <figure class="shot-fig"><div class="shot-ph" role="img" aria-label="El ALive Query Designer con una tabla de otra extensión.">Captura pendiente</div><figcaption>El ALive Query Designer con una tabla de otra extensión.</figcaption></figure>
+</div></section>
+
+<section class="block" id="scripts"><div class="inner split">
+  <div>
+    <h2>Cuando una consulta no basta, un script</h2>
+    <p class="sub">Un Dataset también puede ser un script escrito con la sintaxis de AL, el lenguaje de los desarrolladores de Business Central, para la lógica que una consulta visual no puede expresar.</p>
+    <ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Sintaxis de AL con IntelliSense, ejecutada sobre sus datos en vivo desde el Studio.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>De solo lectura y aislado: un script de Workspace no puede escribir datos, registrar, confirmar transacciones ni ejecutar codeunits.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Nueve plantillas ya usan scripts, con el plan gratuito; escriba los suyos con Pro.</span></li></ul>
+    <p class="more"><a href="../analysis/workspace-script-dataset.html">Cómo funcionan los Datasets de script (en inglés)</a></p>
+  </div>
+  <figure class="shot-fig"><div class="shot-ph" role="img" aria-label="Un Dataset de script en el editor del Studio.">Captura pendiente</div><figcaption>Un Dataset de script en el editor del Studio.</figcaption></figure>
+</div></section>
+
+<section class="block alt" id="templates"><div class="inner">
+  <div class="split">
+    <div>
+      <h2>46 plantillas, listas desde el primer día</h2>
+      <p class="sub">Cada plantilla se ejecuta sobre sus propios datos el mismo día de la instalación, con el plan gratuito. Una prueba automática compara sus cifras con los movimientos de Business Central. Todas las plantillas están disponibles en inglés y en español.</p>
+    </div>
+    <figure class="shot-fig"><div class="shot-ph" role="img" aria-label="La lista ALive Workspaces: elija una plantilla y ejecútela.">Captura pendiente</div><figcaption>La lista ALive Workspaces: elija una plantilla y ejecútela.</figcaption></figure>
+  </div>
+  <div class="gallery">
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Panel de dirección">Captura pendiente</div><figcaption>Panel de dirección</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Real frente a presupuesto">Captura pendiente</div><figcaption>Real frente a presupuesto</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Antigüedad de cobros y pagos">Captura pendiente</div><figcaption>Antigüedad de cobros y pagos</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Análisis de ventas">Captura pendiente</div><figcaption>Análisis de ventas</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Cuadro de mando de ventas">Captura pendiente</div><figcaption>Cuadro de mando de ventas</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Análisis ABC">Captura pendiente</div><figcaption>Análisis ABC</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Análisis de compras">Captura pendiente</div><figcaption>Análisis de compras</figcaption></figure>
+    <figure class="shot-fig thumb"><div class="shot-ph" role="img" aria-label="Proyectos">Captura pendiente</div><figcaption>Proyectos</figcaption></figure>
+  </div>
+  <p class="price-note">Haga clic en una captura para verla a tamaño completo. Capturas en inglés; todas las plantillas están disponibles también en español.</p>
+  <div class="cats">
+    <div class="cat"><h3>Dirección</h3><ul><li>Panel de dirección</li></ul><h3>Sistema</h3><ul><li>Estado del sistema</li></ul></div>
+    <div class="cat"><h3>Finanzas</h3><ul><li>Real frente a presupuesto</li><li>Previsión de flujo de caja</li><li>Posición de tesorería</li><li>Detalle de movimientos de clientes y proveedores</li><li>Ratios financieros</li><li>Activos fijos</li><li>Detalle de movimientos contables</li><li>Contabilidad por dimensión</li><li>Contabilidad por periodo</li><li>Comportamiento de pago</li><li>Antigüedad de cobros y pagos</li><li>Devoluciones sin abonar</li><li>Enviado y recibido sin facturar</li><li>Fondo de maniobra</li></ul></div>
+    <div class="cat"><h3>Ventas</h3><ul><li>Retención de clientes</li><li>Clientes por quintil</li><li>Ventas diarias</li><li>Clientes inactivos</li><li>Ventas y margen por producto</li><li>Ventas de productos por categoría</li><li>Ventas de productos por cliente</li><li>Pedidos y ofertas abiertos</li><li>Devoluciones</li><li>Análisis de ventas</li><li>Ventas por vendedor</li><li>Embudo de ventas</li><li>Cuadro de mando de ventas</li></ul></div>
+    <div class="cat"><h3>Compras</h3><ul><li>Análisis de compras</li><li>Compras por producto y almacén</li><li>Reaprovisionamiento por proveedor</li><li>Proveedores al alza y a la baja</li><li>Cumplimiento de entregas de proveedores</li></ul><h3>Inventario</h3><ul><li>Análisis ABC</li><li>Contenido de ubicaciones</li><li>Inventario por almacén</li><li>Existencias de baja rotación</li><li>Existencias por lote y número de serie</li><li>Oferta y demanda</li></ul></div>
+    <div class="cat"><h3>Fabricación</h3><ul><li>Órdenes de producción</li><li>Carga de centros de trabajo y de máquina</li></ul><h3>Proyectos</h3><ul><li>Proyectos</li><li>Consumo y facturación de proyectos por tipo</li></ul><h3>Servicio</h3><ul><li>Contratos y productos de servicio</li><li>Pedidos de servicio</li></ul></div>
+  </div>
+</div></section>
+
+<section class="block" id="roles"><div class="inner split">
+  <div><h2>Para el administrador</h2><ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Diseñe visualmente en el ALive Workspace Studio: consultas sobre las tablas de BC con combinaciones, FlowFields y dimensiones, sus informes e informes financieros de BC, o un script de solo lectura.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Asigne cada Workspace a conjuntos de permisos. No hay una segunda lista de usuarios.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Permita que los usuarios programen sus propias instantáneas desde la cola de proyectos, para que los Workspaces pesados se abran al instante.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Abra Workspaces desde las fichas de clientes, proveedores, productos y otras, filtrados por ese registro.</span></li></ul></div>
+  <figure class="shot-fig vid"><div class="shot-ph" role="img" aria-label="El ALive Workspace Studio: Datasets, el ALive Query Designer y vistas.">Vídeo pendiente</div><figcaption>El ALive Workspace Studio: Datasets, el ALive Query Designer y vistas.</figcaption></figure>
+</div></section>
+
+<section class="security" id="security"><div class="inner">
+  <svg class="ico big" aria-hidden="true"><use href="#i-shield"/></svg>
+  <h2>Sus datos se quedan en Business Central</h2>
+  <p class="sub">ALive Analysis es una extensión dentro de Business Central, no un servicio a su lado. Sus datos no tienen otro sitio adonde ir.</p>
+  <ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Las filas van del servidor de Business Central a la página del usuario y a ningún otro sitio. No hay ninguna copia en otra nube.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Cada ejecución lee con los permisos de Business Central del propio usuario; cada Workspace se asigna a conjuntos de permisos.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Las tablas y los campos que una extensión marca como internos nunca se ofrecen.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>De solo lectura por diseño: el análisis no tiene ningún camino que escriba datos del negocio.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>La telemetría de Business Central solo contiene recuentos y duraciones, nunca un valor, un filtro ni un nombre.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>ALive Analysis no hace ninguna llamada propia a ningún servidor.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Un archivo solo sale cuando un usuario lo exporta a Excel o CSV, con el propio permiso de exportación de Business Central.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>El asistente de IA opcional solo recibe definiciones, nunca una cifra.</span></li></ul>
+  <p class="more"><a href="../analysis/workspace-permissions.html">Permisos y acceso en la documentación (en inglés)</a></p>
+</div></section>
+
+<section class="block" id="ai"><div class="inner split">
+  <div>
+    <p class="eyebrow">Pro + AI</p>
+    <h2>Un asistente que nunca ve sus cifras</h2>
+    <p class="sub">ALive AI es una aplicación aparte y opcional. Describa el análisis que necesita y diseña el Workspace. También puede mejorar o explicar un Workspace y sugerir vistas.</p>
+    <ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Trabaja solo con metadatos: definiciones de tablas y campos, nunca una fila que devuelva una consulta, un informe o un script.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Los valores de un Workspace o un script existentes se ocultan tras marcadores antes de enviarlos, salvo que decida enviar un script tal cual.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Su administrador elige el proveedor de IA y usa la clave propia de la empresa, con límites mensuales.</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Cada solicitud queda en un registro que puede leer. Un Workspace diseñado se abre sin guardar, para que una persona lo revise.</span></li></ul>
+  </div>
+  <figure class="shot-fig"><div class="shot-ph" role="img" aria-label="El registro de solicitudes muestra lo que se envió: definiciones, ninguna cifra.">Captura pendiente</div><figcaption>El registro de solicitudes muestra lo que se envió: definiciones, ninguna cifra.</figcaption></figure>
+</div></section>
+
+<section class="block alt" id="prices"><div class="inner">
+  <h2>Precios</h2>
+  <p class="sub">Por usuario y mes, a través de Microsoft AppSource. Empiece gratis, y siga gratis si le bastan las plantillas.</p>
+  <div class="prices">
+    <div class="price"><h3>Free</h3><div class="amount">$0</div><ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Todas las plantillas de Workspace</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Para todos los usuarios, para siempre</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Diseñar y previsualizar consultas</span></li></ul></div>
+    <div class="price main"><h3>Pro <em>Para sus propios Workspaces</em></h3><div class="amount">$9 <small>/ usuario / mes</small></div><ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Todo lo del plan Free</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Cree y ejecute sus propios Workspaces</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Las tablas y los campos de sus extensiones y de terceros</strong></span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Consultas visuales sobre cualquier tabla de Business Central</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Scripts de solo lectura con sintaxis de AL</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Sus informes de Business Central como origen</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Informes financieros, calculados por Business Central</span></li></ul></div>
+    <div class="price"><h3>Pro + AI</h3><div class="amount">$14 <small>/ usuario / mes</small></div><ul class="checks"><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Todo lo del plan Pro</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Un asistente que diseña Workspaces</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Solo metadatos, con la clave de su propio proveedor de IA</span></li><li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Una aplicación aparte: sin ella, ALive no envía nada a ninguna IA</span></li></ul></div>
+  </div>
+  <p class="price-note">Precios orientativos en dólares estadounidenses. AppSource muestra el precio en su moneda local. Solo para Business Central online.</p>
+</div></section>
+</main>
+
+<footer><div class="inner">
+  <span>ALive Analysis, de Pages'7</span>
+  <a href="../analysis/">Documentación (en inglés)</a>
+  <a href="../help/">Ayuda de todas las aplicaciones ALive (en inglés)</a>
+  <span><a href="../" hreflang="en" lang="en">English</a> · <b>Español</b></span>
+  <small>Microsoft, Dynamics 365 y Business Central son marcas comerciales del grupo de empresas Microsoft.</small>
+</div></footer>
+<script>
+// Clips play while on screen, unless the reader asked for less motion or paused one.
+const still = matchMedia('(prefers-reduced-motion: reduce)');
+const seen = new IntersectionObserver(entries => entries.forEach(({ target: v, isIntersecting }) => {
+  if (isIntersecting && !still.matches && !v.dataset.paused) v.play().catch(() => {});
+  else if (!isIntersecting && !v.paused) { v.ours = true; v.pause(); }
+}), { threshold: 0.5 });
+document.querySelectorAll('video[data-auto]').forEach(v => {
+  v.addEventListener('pause', () => { if (!v.ours) v.dataset.paused = '1'; v.ours = false; });
+  v.addEventListener('play', () => { delete v.dataset.paused; });
+  seen.observe(v);
+});
+</script>
+</body>
+</html>
