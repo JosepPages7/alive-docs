@@ -35,9 +35,10 @@ Workspace scripts run in a sandbox, with the permissions of the user who runs th
 
 - Insert, modify or delete database records.
 - Use `Commit`, `Validate` or `LockTable`.
-- Run codeunits or reports, or use codeunit variables.
+- Run codeunits or reports, open pages (`Page.Run`, `Page.RunModal`), or use codeunit variables.
+- Use `Sleep`.
 
-A script that tries gets an error that starts with **SandboxViolation:** or says the statement **is not allowed in sandboxed scripts**. Opening a page with `Page.Run` is allowed.
+A script that tries gets an error that starts with **SandboxViolation:** or says the statement **is not allowed in sandboxed scripts**.
 
 ## Filters at run
 
