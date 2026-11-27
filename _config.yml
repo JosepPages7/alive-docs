@@ -2,3 +2,5 @@ title: ALive for Business Central
 description: Help for the ALive apps for Microsoft Dynamics 365 Business Central - ALive Code, ALive Analysis and ALive AI.
 plugins:
   - jekyll-sitemap
+exclude:
+  - site

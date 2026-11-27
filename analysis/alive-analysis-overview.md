@@ -14,7 +14,7 @@ ALive Analysis adds interactive workspaces and a visual query designer to Busine
 | ALive Workspaces | Analysis dashboards built from one or more datasets. A dataset gets its rows from a query, a script, a Business Central report or a financial report. Users explore the rows as lists, pivots, charts, KPI tiles, slicers and a spreadsheet view arranged in panes and pages. |
 | Query Designer | A visual designer for the queries that feed workspaces. See [Query Designer](query-designer.md). |
 
-ALive Analysis is a separate extension: you can use it only when it's installed in your environment. It works on its own and doesn't need ALive Code. ALive AI, another separate extension, adds an assistant to the Workspace Studio when it's installed too. To learn more, see [Three separate extensions](../index.md#three-separate-extensions).
+ALive Analysis is a separate extension: you can use it only when it's installed in your environment. It works on its own and doesn't need ALive Code. ALive AI, another separate extension, adds an assistant to the Workspace Studio when it's installed too. To learn more, see [Three separate extensions](../help/index.md#three-separate-extensions).
 
 ## Where to start
 

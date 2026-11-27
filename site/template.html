@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="text-scale" content="scale">
+<title>{{meta.title}}</title>
+<meta name="description" content="{{meta.description}}">
+<link rel="canonical" href="{{canonical}}">
+{{alternates}}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{meta.title}}">
+<meta property="og:description" content="{{meta.description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:locale" content="{{meta.locale}}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Crect x='1' y='1' width='24' height='24' rx='6' fill='%230e7c86'/%3E%3Crect x='6' y='14' width='3.4' height='6' rx='1' fill='%23fff'/%3E%3Crect x='11.3' y='10' width='3.4' height='10' rx='1' fill='%23fff'/%3E%3Crect x='16.6' y='6' width='3.4' height='14' rx='1' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+{{css}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 26 26"><rect x="1" y="1" width="24" height="24" rx="6" fill="currentColor"/><rect x="6" y="14" width="3.4" height="6" rx="1" fill="#fff"/><rect x="11.3" y="10" width="3.4" height="10" rx="1" fill="#fff"/><rect x="16.6" y="6" width="3.4" height="14" rx="1" fill="#fff"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 8h16l-1 12H5z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-drill" viewBox="0 0 24 24"><path d="M4 6h10M4 12h7M4 18h5"/><path d="M14 13l6 6M20 14v5h-5"/></symbol>
+  <symbol id="i-open" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M3.5 9h17M8 13.5h4M8 16h7"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></symbol>
+</svg>
+
+<a class="skip" href="#content">{{nav.skip}}</a>
+<nav class="top"><div class="inner">
+  <a class="mark" href="{{root}}"><svg aria-hidden="true"><use href="#mark"/></svg>ALive Analysis</a>
+  <span class="links"><a href="#how">{{nav.how}}</a><a href="#features">{{nav.features}}</a><a href="#templates">{{nav.templates}}</a><a href="#security">{{nav.security}}</a><a href="#prices">{{nav.prices}}</a><a href="{{root}}analysis/">{{nav.docs}}</a></span>
+  <span class="lang">{{langswitch}}</span>
+</div></nav>
+
+<main id="content">
+<header class="hero"><div class="inner">
+  <div>
+    <p class="eyebrow">{{hero.eyebrow}}</p>
+    <h1>{{hero.title}}</h1>
+    <p class="lead">{{hero.lead}}</p>
+    <div class="ctas">
+      <a class="btn" href="{{root}}analysis/">{{cta.docs}}</a>
+      <span class="badge"><svg class="ico" aria-hidden="true"><use href="#i-store"/></svg>{{cta.appsource}}</span>
+    </div>
+    <p class="free"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>{{hero.free}}</p>
+  </div>
+  {{shot:ceo-dashboard|hero.shot}}
+</div></header>
+
+<section class="pain" aria-label="{{pain.label}}"><div class="inner">
+  <p class="quote">{{pain.quote1}} <span>{{pain.quote2}}</span></p>
+  <ul>
+    <li><strong><s><span class="vh">{{pain.before}} </span>{{pain.1.old}}</s> <span class="vh">{{pain.now}} </span>{{pain.1.new}}</strong><p>{{pain.1.text}}</p></li>
+    <li><strong><s><span class="vh">{{pain.before}} </span>{{pain.2.old}}</s> <span class="vh">{{pain.now}} </span>{{pain.2.new}}</strong><p>{{pain.2.text}}</p></li>
+    <li><strong><s><span class="vh">{{pain.before}} </span>{{pain.3.old}}</s> <span class="vh">{{pain.now}} </span>{{pain.3.new}}</strong><p>{{pain.3.text}}</p></li>
+  </ul>
+</div></section>
+
+<section class="block" id="how"><div class="inner">
+  <h2>{{how.title}}</h2>
+  <p class="sub">{{how.sub}}</p>
+  <ol class="steps">
+    <li><h3>{{how.1.title}}</h3><p>{{how.1.text}}</p></li>
+    <li><h3>{{how.2.title}}</h3><p>{{how.2.text}}</p></li>
+    <li><h3>{{how.3.title}}</h3><p>{{how.3.text}}</p></li>
+  </ol>
+</div></section>
+
+<section class="block alt" id="features"><div class="inner">
+  <h2>{{feat.title}}</h2>
+  <p class="sub">{{feat.sub}}</p>
+  <div class="videos">
+    {{video:slice|vid.slice}}
+    {{video:drill|vid.drill}}
+    {{video:context|vid.context}}
+  </div>
+  <div class="cards four">
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-drill"/></svg><h3>{{feat.1.title}}</h3><p>{{feat.1.text}}</p></div>
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-open"/></svg><h3>{{feat.2.title}}</h3><p>{{feat.2.text}}</p></div>
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg><h3>{{feat.3.title}}</h3><p>{{feat.3.text}}</p></div>
+    <div class="card"><svg class="ico" aria-hidden="true"><use href="#i-grid"/></svg><h3>{{feat.5.title}}</h3><p>{{feat.5.text}}</p></div>
+  </div>
+</div></section>
+
+<section class="block" id="sheet"><div class="inner split">
+  <div>
+    <h2>{{sheet.title}}</h2>
+    <p class="sub">{{sheet.lead}}</p>
+    <ul class="checks">{{checks:sheet.list}}</ul>
+    <p class="more"><a href="{{root}}analysis/workspace-sheet-view.html">{{sheet.more}}</a></p>
+  </div>
+  {{shot:sheet|sheet.shot}}
+</div></section>
+
+<section class="block alt" id="extensions"><div class="inner split">
+  <div>
+    <p class="eyebrow">{{ext.eyebrow}}</p>
+    <h2>{{ext.title}}</h2>
+    <p class="sub">{{ext.lead}}</p>
+    <ul class="checks">{{checks:ext.list}}</ul>
+  </div>
+  {{shot:extension-fields|ext.shot}}
+</div></section>
+
+<section class="block" id="scripts"><div class="inner split">
+  <div>
+    <h2>{{scripts.title}}</h2>
+    <p class="sub">{{scripts.lead}}</p>
+    <ul class="checks">{{checks:scripts.list}}</ul>
+    <p class="more"><a href="{{root}}analysis/workspace-script-dataset.html">{{scripts.more}}</a></p>
+  </div>
+  {{shot:script-editor|scripts.shot}}
+</div></section>
+
+<section class="block alt" id="templates"><div class="inner">
+  <div class="split">
+    <div>
+      <h2>{{tpl.title}}</h2>
+      <p class="sub">{{tpl.sub}}</p>
+    </div>
+    {{shot:templates|tpl.shot}}
+  </div>
+  <div class="gallery">
+    {{thumb:tpl-ceo-dashboard|tpl.g.1}}
+    {{thumb:tpl-actual-vs-budget|tpl.g.2}}
+    {{thumb:tpl-aging|tpl.g.3}}
+    {{thumb:tpl-sales-analysis|tpl.g.4}}
+    {{thumb:tpl-sales-scorecard|tpl.g.5}}
+    {{thumb:tpl-abc-analysis|tpl.g.6}}
+    {{thumb:tpl-purchase-analysis|tpl.g.7}}
+    {{thumb:tpl-projects|tpl.g.8}}
+  </div>
+  <p class="price-note">{{tpl.g.note}}</p>
+  <div class="cats">
+    <div class="cat"><h3>{{tpl.cat.management}}</h3><ul>{{list:tpl.list.management}}</ul><h3>{{tpl.cat.system}}</h3><ul>{{list:tpl.list.system}}</ul></div>
+    <div class="cat"><h3>{{tpl.cat.finance}}</h3><ul>{{list:tpl.list.finance}}</ul></div>
+    <div class="cat"><h3>{{tpl.cat.sales}}</h3><ul>{{list:tpl.list.sales}}</ul></div>
+    <div class="cat"><h3>{{tpl.cat.purchasing}}</h3><ul>{{list:tpl.list.purchasing}}</ul><h3>{{tpl.cat.inventory}}</h3><ul>{{list:tpl.list.inventory}}</ul></div>
+    <div class="cat"><h3>{{tpl.cat.production}}</h3><ul>{{list:tpl.list.production}}</ul><h3>{{tpl.cat.projects}}</h3><ul>{{list:tpl.list.projects}}</ul><h3>{{tpl.cat.service}}</h3><ul>{{list:tpl.list.service}}</ul></div>
+  </div>
+</div></section>
+
+<section class="block" id="roles"><div class="inner split">
+  <div><h2>{{roles.admin.title}}</h2><ul class="checks">{{checks:roles.admin.list}}</ul></div>
+  {{video:design|roles.shot}}
+</div></section>
+
+<section class="security" id="security"><div class="inner">
+  <svg class="ico big" aria-hidden="true"><use href="#i-shield"/></svg>
+  <h2>{{sec.title}}</h2>
+  <p class="sub">{{sec.lead}}</p>
+  <ul class="checks">{{checks:sec.list}}</ul>
+  <p class="more"><a href="{{root}}analysis/workspace-permissions.html">{{sec.more}}</a></p>
+</div></section>
+
+<section class="block" id="ai"><div class="inner split">
+  <div>
+    <p class="eyebrow">{{ai.eyebrow}}</p>
+    <h2>{{ai.title}}</h2>
+    <p class="sub">{{ai.lead}}</p>
+    <ul class="checks">{{checks:ai.list}}</ul>
+  </div>
+  {{shot:ai-request-log|ai.shot}}
+</div></section>
+
+<section class="block alt" id="prices"><div class="inner">
+  <h2>{{prices.title}}</h2>
+  <p class="sub">{{prices.sub}}</p>
+  <div class="prices">
+    <div class="price"><h3>Free</h3><div class="amount">$0</div><ul class="checks">{{checks:prices.free.list}}</ul></div>
+    <div class="price main"><h3>Pro <em>{{prices.pro.badge}}</em></h3><div class="amount">$9 <small>{{prices.per}}</small></div><ul class="checks">{{checks:prices.pro.list}}</ul></div>
+    <div class="price"><h3>Pro + AI</h3><div class="amount">$14 <small>{{prices.per}}</small></div><ul class="checks">{{checks:prices.ai.list}}</ul></div>
+  </div>
+  <p class="price-note">{{prices.note}}</p>
+</div></section>
+</main>
+
+<footer><div class="inner">
+  <span>{{footer.by}}</span>
+  <a href="{{root}}analysis/">{{nav.docs}}</a>
+  <a href="{{root}}help/">{{footer.help}}</a>
+  <span>{{langswitch}}</span>
+  <small>{{footer.tm}}</small>
+</div></footer>
+<script>
+// Clips play while on screen, unless the reader asked for less motion or paused one.
+const still = matchMedia('(prefers-reduced-motion: reduce)');
+const seen = new IntersectionObserver(entries => entries.forEach(({ target: v, isIntersecting }) => {
+  if (isIntersecting && !still.matches && !v.dataset.paused) v.play().catch(() => {});
+  else if (!isIntersecting && !v.paused) { v.ours = true; v.pause(); }
+}), { threshold: 0.5 });
+document.querySelectorAll('video[data-auto]').forEach(v => {
+  v.addEventListener('pause', () => { if (!v.ours) v.dataset.paused = '1'; v.ours = false; });
+  v.addEventListener('play', () => { delete v.dataset.paused; });
+  seen.observe(v);
+});
+</script>
+</body>
+</html>
